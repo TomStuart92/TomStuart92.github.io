@@ -62,30 +62,34 @@ When we use the or operator, we return 'false' if both are 'false' or 'true' oth
 
 AND (&&):
 
-Combination&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Result  
-TRUE && TRUE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TRUE  
-TRUE && FALSE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FALSE  
-FALSE && TRUE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FALSE  
-FALSE && FALSE&nbsp;&nbsp;&nbsp;&nbsp;FALSE  
+|Combination|Result|
+| --- | --- |
+| TRUE && TRUE | TRUE |
+| TRUE && FALSE | FALSE |
+| FALSE && TRUE | FALSE |
+| FALSE && FALSE | FALSE |  
+
 
 OR (||):
 
-Combination&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Result  
-TRUE && TRUE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TRUE  
-TRUE && FALSE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TRUE  
-FALSE && TRUE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TRUE  
-FALSE && FALSE&nbsp;&nbsp;&nbsp;&nbsp;FALSE  
+|Combination|Result|
+| --- | --- |
+| TRUE && TRUE | TRUE |
+| TRUE && FALSE | TRUE |
+| FALSE && TRUE | TRUE |
+| FALSE && FALSE | FALSE |   
 
 We call these tables truth tables. Now what about XOR. Well XOR stands for exclusive or.
 When we use the exclusive or operator, we return true if the inputs are different:
 
 OR (^):
 
-Combination&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Result  
-TRUE && TRUE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FALSE  
-TRUE && FALSE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TRUE  
-FALSE && TRUE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TRUE  
-FALSE && FALSE&nbsp;&nbsp;&nbsp;&nbsp;FALSE  
+|Combination|Result|
+| --- | --- |
+| TRUE && TRUE | FALSE |
+| TRUE && FALSE | TRUE |
+| FALSE && TRUE | TRUE |
+| FALSE && FALSE | FALSE |   
 
 Now we can also use these operators to combine two binary strings. Looking at each bit in turn we can treat 1 as TRUE, and 0 as FALSE. Lets encode two letters using our three operators:
 
