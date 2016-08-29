@@ -79,7 +79,7 @@ analytics:
 author:
   name             : "Tom Stuart"
   avatar           : "bio_photo.jpg"
-  bio              : "Learning to code at Makers Academy"
+  bio              : "Learning to code \nat Makers Academy"
   location         : "London, UK"
   email            : thomascstuart92@gmail.com
   uri              :
@@ -241,3 +241,10 @@ defaults:
       comments: true
       share: true
       related: true
+      excerpt: "This post should [...]"
+    header:
+      overlay_image: default_teaser.jpg
+      overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
+      caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
+      cta_label: "More Info"
+      cta_url: "https://unsplash.com"
