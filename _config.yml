@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-GB"
-title                    : "Untitled"
+title                    : "String, Hash, Array"
 title_separator          : "-"
 name                     : "Tom Stuart"
 description              : "Programming, Politics and Puns"
