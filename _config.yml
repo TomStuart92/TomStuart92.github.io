@@ -14,7 +14,6 @@ description              : "Programming, Politics and Puns"
 url                      : "https://TomStuart92.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "TomStuart92/TomStuart92.github.io"
-teaser                   : "default_teaser.jpg"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:

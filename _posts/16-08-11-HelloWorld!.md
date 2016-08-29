@@ -1,6 +1,6 @@
 ---
 title: Embracing the cliché, Hello World!
-excerpt: "Welcome Reader, to Problematic Programming."
+excerpt: "Welcome Reader, to String, Hash, Array."
 header:
   overlay_image: default_teaser.jpg
   overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
