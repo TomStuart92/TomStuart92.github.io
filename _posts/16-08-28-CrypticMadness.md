@@ -60,7 +60,7 @@ We use these operators to combine two values based on their truthfulness.
 When we use the and operator, we return 'true' if both are 'true', or 'false' otherwise.
 When we use the or operator, we return 'false' if both are 'false' or 'true' otherwise.
 
-AND (`&&`):
+AND - `&&`:
 
 |Combination|Result|
 | --- | --- |
@@ -70,47 +70,47 @@ AND (`&&`):
 | FALSE && FALSE | FALSE |  
 
 
-OR (`||`):
+OR - `||`:
 
 |Combination|Result|
 | --- | --- |
-| TRUE && TRUE | TRUE |
-| TRUE && FALSE | TRUE |
-| FALSE && TRUE | TRUE |
-| FALSE && FALSE | FALSE |   
+| TRUE || TRUE | TRUE |
+| TRUE || FALSE | TRUE |
+| FALSE || TRUE | TRUE |
+| FALSE || FALSE | FALSE |   
 
 We call these tables truth tables. Now what about XOR. Well XOR stands for exclusive or.
 When we use the exclusive or operator, we return true if the inputs are different:
 
-OR (`^`):
+OR - `^`:
 
 |Combination|Result|
 | --- | --- |
-| TRUE && TRUE | FALSE |
-| TRUE && FALSE | TRUE |
-| FALSE && TRUE | TRUE |
-| FALSE && FALSE | FALSE |   
+| TRUE ^ TRUE | FALSE |
+| TRUE ^ FALSE | TRUE |
+| FALSE ^ TRUE | TRUE |
+| FALSE ^ FALSE | FALSE |   
 
 Now we can also use these operators to combine two binary strings. Looking at each bit in turn we can treat 1 as TRUE, and 0 as FALSE. Lets encode two letters using our three operators:
 
 A = 01000001
 C = 01000011
 
-AND (`&&`):
+AND - `&&`:
 
 01000001   
 01000011   
 ========     
 01000001   
 
-OR (`||`):
+OR - `||`:
 
 01000001   
 01000011   
 ========      
 01000011   
 
-XOR (`^`):
+XOR - `^`:
 
 01000001   
 01000011   
