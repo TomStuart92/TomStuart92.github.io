@@ -1,6 +1,6 @@
 ---
 title: Embracing the cliche, Hello World!
-excerpt: "Welcome Reader, to Problematic Programming" 
+excerpt: "Welcome Reader, to Problematic Programming." 
 ---
 'Who are you?', I hear you ask dear reader.
 Another individual finding there way through the infinite mess of life?
