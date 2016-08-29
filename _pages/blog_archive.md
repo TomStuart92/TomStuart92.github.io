@@ -1,5 +1,6 @@
 ---
 layout: archive
+permalink: /blog/
 defaults:
   # _pages
   - scope:
