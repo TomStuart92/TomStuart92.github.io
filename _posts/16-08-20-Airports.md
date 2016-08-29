@@ -1,6 +1,6 @@
 ---
 title: Taking to the skies
-excerpt: "In this blog we explore the a test driven solution to modelling an airport."
+excerpt: "In this blog we develop a test driven solution to modelling an airport."
 teaser: plane.jpg
 header:
   overlay_image: plane.jpg

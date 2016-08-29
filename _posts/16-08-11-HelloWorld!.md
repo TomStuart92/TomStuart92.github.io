@@ -16,6 +16,6 @@ But I feel this is my biggest challenge yet.
 
 Over the next 12 weeks I will be learning a whole host of new languages, methodologies and best practices. I'm sure there will be many late nights, countless coffee stops and endless hair pulling. But at the end I hope to be able to secure a job as a junior developer.
 
-So to answer the question, my only qualification is that I'm a beginner too I hope that will lead to a gentler introduction to these topics, than reading an experts take. I also enjoy making terrible puns, so if you're a fan of that, then feel free to stick around. Otherwise I hope you do find something of use here.
+So to answer the question, my only qualification is that I'm a beginner too! I hope that will lead to a gentler introduction to these topics, than reading an experts take would provide. I also enjoy making terrible puns, so if you're a fan of that, then feel free to stick around. Otherwise I hope you do find something of use here.
 
-Tom Stuart
+Tom
