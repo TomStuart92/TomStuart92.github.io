@@ -1,8 +1,14 @@
 ---
-title: Embracing the cliché, Hello World!
-excerpt: "Welcome Reader, to Problematic Programming."
-header:
-  overlay_image: default_teaser.jpg
-  overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
+layout: archive
+author_profile: true
 ---
-<h1> hello </h1>
+
+{% include base_path %}
+
+<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+
+{% for post in paginator.posts %}
+  {% include archive-single.html %}
+{% endfor %}
+
+{% include paginator.html %}
