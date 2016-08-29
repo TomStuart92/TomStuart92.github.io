@@ -1,8 +1,7 @@
 ---
 title: Taking to the skies
+excerpt: "In this blog we explore the a test driven solution to modelling an airport."
 ---
-In this blog we explore the a test driven solution to modelling an airport.
-
 ## Introduction
 I had planned to explore a calculator program I wrote this week, but instead I want to focus on the first weekend challenge for Makers Academy.
 
