@@ -1,5 +1,5 @@
 ---
-title: Embracing the cliche, Hello World!
+title: Embracing the cliché, Hello World!
 excerpt: "Welcome Reader, to Problematic Programming."
 header:
   overlay_image: default_teaser.jpg
