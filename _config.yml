@@ -10,7 +10,7 @@ locale                   : "en-GB"
 title                    : "Problematic Programming"
 title_separator          : "-"
 name                     : "Tom Stuart"
-description              : "Programming, Politics and "
+description              : "Programming, Politics and Puns"
 url                      : "https://TomStuart92.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "TomStuart92/TomStuart92.github.io"
@@ -228,6 +228,9 @@ compress_html:
   ignore:
     envs: development
 
+#pages
+include: ["_pages"]
+
 # posts
 defaults:
   # _posts
@@ -241,9 +244,3 @@ defaults:
       comments: true
       share: true
       related: true
-    header:
-      overlay_image: default_teaser.jpg
-      overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
-      caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
-      cta_label: "More Info"
-      cta_url: "https://unsplash.com"
