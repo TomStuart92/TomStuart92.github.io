@@ -6,7 +6,7 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-locale                   : "en"
+locale                   : "en-GB"
 title                    : "My Blog"
 title_separator          : "-"
 name                     : "Tom Stuart"
@@ -14,7 +14,7 @@ description              : "Programming, Politics and "
 url                      : "https://TomStuart92.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "TomStuart92/TomStuart92.github.io"
-teaser                   : # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
+teaser                   : "default_teaser.jpg"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -89,7 +89,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : http://www.github.com/TomStuart92
+  github           : TomStuart92
   google_plus      :
   keybase          :
   instagram        :
@@ -227,3 +227,17 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+
+# posts
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
