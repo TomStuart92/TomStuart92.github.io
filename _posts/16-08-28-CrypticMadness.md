@@ -1,8 +1,7 @@
 ---
 title: Cryptic Madness
+excerpt: "In this blog post we explore some basic cryptology."
 ---
-In this blog post we explore some basic cryptology.
-
 ## Introduction
 
 The following blog post probably contains a whole load of mistakes, mistruths and general misinformation.

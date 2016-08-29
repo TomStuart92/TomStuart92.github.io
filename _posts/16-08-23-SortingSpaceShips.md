@@ -1,8 +1,7 @@
 ---
 title: Sorting Spaceships
+excerpt: "In this blog post we explore sorting with the spaceship operator!"
 ---
-In this blog post we explore sorting with the spaceship operator!
-
 ## Sorting Objects
 
 We all know that we can sort a variety of ruby objects. Sorting relies on us being able to define one object as becoming before or being bigger (>) than another:
