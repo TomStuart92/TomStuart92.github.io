@@ -18,7 +18,7 @@ These challenges are an entirely different kettle of fish. They are entirely pra
 
 I've found them particularly challenging to date, because of my inexperience with both programming and cryptology. So I'm writing this blog post, as in my view, there's no better way to improve your understanding of a topic then to talk to someone about it. Even if its just the vacuum of the internet.
 
-So far I've solved the first five problems of the first set, but lets look at the first two in a bit of detail.
+So far I've solved the first five problems of the first set, but lets look at the first two in a bit of detail. I'll add more in a later post.
 
 ## Problem One - Convert hex to base64
 
@@ -130,7 +130,7 @@ So encoding with AND, and OR just gave us back the original plaintext. But using
 AND returns 75% False, 25% True.
 OR returns 25% False, 75% True.
 XOR returns 50% False, 50% True.
-This makes it better for obscuring the original distributions.
+This makes it better for obscuring the original distributions. So we can use XOR operations to encrypt a string using another string as the key. This is a fairly insecure method, but is an important foundation for later.
 
 **Solution:**
 
