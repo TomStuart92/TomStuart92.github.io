@@ -7,7 +7,7 @@ header:
 ---
 ## Introduction
 
-The following blog post probably contains a whole load of mistakes, mistruths and general misinformation.
+**The following blog post probably contains a whole load of mistakes, mistruths and general misinformation.**
 
 So through an acquaintance, I have stumbled upon the Cryptopals Crypto Challenges: [Link](http://cryptopals.com/).
 

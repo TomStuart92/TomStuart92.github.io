@@ -2,7 +2,7 @@
 title: Taking to the skies
 excerpt: "In this blog we explore the a test driven solution to modelling an airport."
 header:
-  overlay_image: default_teaser.jpg
+  overlay_image: plane.jpg
   overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
 ---
 ## Introduction
