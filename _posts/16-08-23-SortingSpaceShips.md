@@ -1,6 +1,9 @@
 ---
 title: Sorting Spaceships
 excerpt: "In this blog post we explore sorting with the spaceship operator!"
+header:
+  overlay_image: default_teaser.jpg
+  overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
 ---
 ## Sorting Objects
 

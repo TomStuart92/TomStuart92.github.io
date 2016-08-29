@@ -1,6 +1,9 @@
 ---
 title: Taking to the skies
 excerpt: "In this blog we explore the a test driven solution to modelling an airport."
+header:
+  overlay_image: default_teaser.jpg
+  overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
 ---
 ## Introduction
 I had planned to explore a calculator program I wrote this week, but instead I want to focus on the first weekend challenge for Makers Academy.

@@ -4,9 +4,6 @@ excerpt: "Welcome Reader, to Problematic Programming."
 header:
   overlay_image: default_teaser.jpg
   overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
-  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
-  cta_label: "More Info"
-  cta_url: "https://unsplash.com"
 ---
 'Who are you?', I hear you ask dear reader.
 Another individual finding there way through the infinite mess of life?
