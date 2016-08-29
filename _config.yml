@@ -78,7 +78,7 @@ analytics:
 # Site Author
 author:
   name             : "Tom Stuart"
-  avatar           : "bio-photo.jpg"
+  avatar           : "bio_photo.jpg"
   bio              : "Learning to code at Makers Academy"
   location         : "London, UK"
   email            :
