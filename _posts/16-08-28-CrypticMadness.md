@@ -96,21 +96,21 @@ Now we can also use these operators to combine two binary strings. Looking at ea
 A = 01000001
 C = 01000011
 
-AND (&&):
+AND (`&&`):
 
 01000001   
 01000011   
 ========     
 01000001   
 
-OR (||):
+OR (`||`):
 
 01000001   
 01000011   
 ========      
 01000011   
 
-XOR (^):
+XOR (`^`):
 
 01000001   
 01000011   
