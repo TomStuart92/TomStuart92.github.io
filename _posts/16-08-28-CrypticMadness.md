@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Cryptic Madness
 ---
 In this blog post we explore some basic cryptology.

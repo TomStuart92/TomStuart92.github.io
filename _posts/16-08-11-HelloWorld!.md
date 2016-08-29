@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Well here we are. Embracing the cliche, Hello World!
 ---
 'Who are you?', I hear you ask dear reader.

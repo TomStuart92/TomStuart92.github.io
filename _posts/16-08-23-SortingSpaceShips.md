@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Sorting Spaceships
 ---
 In this blog post we explore sorting with the spaceship operator!
