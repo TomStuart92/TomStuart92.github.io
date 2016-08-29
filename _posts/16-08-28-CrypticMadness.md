@@ -77,10 +77,10 @@ OR - `||`:
 
 |Combination|Result|
 | --- | --- |
-| TRUE || TRUE | TRUE |
-| TRUE || FALSE | TRUE |
-| FALSE || TRUE | TRUE |
-| FALSE || FALSE | FALSE |   
+| TRUE `||` TRUE | TRUE |
+| TRUE `||` FALSE | TRUE |
+| FALSE `||` TRUE | TRUE |
+| FALSE `||` FALSE | FALSE |   
 
 We call these tables truth tables. Now what about XOR. Well XOR stands for exclusive or.
 When we use the exclusive or operator, we return true if the inputs are different:
