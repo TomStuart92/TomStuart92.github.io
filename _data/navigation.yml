@@ -2,5 +2,5 @@
 main:
   - title: "Github Profile"
     url: https://github.com/TomStuart92/
-  - title: "Sample Navigation Link 2"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/navigation/
+  - title: "Student Directory"
+    url: https://floating-eyrie-99970.herokuapp.com/

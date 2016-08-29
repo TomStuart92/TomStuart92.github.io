@@ -119,9 +119,9 @@ XOR - `^`:
 
 Decoding to ASCII gives us:
 
-AND - 'A'
-OR - 'C'
-XOR - '\x02'
+AND - 'A'  
+OR - 'C'  
+XOR - '\x02'  
 
 So encoding with AND, and OR just gave us back the original plaintext. But using the XOR operator gave us a new character, which happens to be a hexadecimal character. More generally we use the XOR operator because it gives us an equal mixture when combining two random strings.
 AND returns 75% False, 25% True.
