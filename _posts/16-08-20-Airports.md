@@ -1,5 +1,5 @@
 ---
-title: Taking to the skies.
+title: Taking to the skies
 ---
 In this blog we explore the a test driven solution to modelling an airport.
 

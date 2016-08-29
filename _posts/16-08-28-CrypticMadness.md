@@ -60,7 +60,7 @@ We use these operators to combine two values based on their truthfulness.
 When we use the and operator, we return 'true' if both are 'true', or 'false' otherwise.
 When we use the or operator, we return 'false' if both are 'false' or 'true' otherwise.
 
-AND (&&):
+AND (`&&`):
 
 |Combination|Result|
 | --- | --- |
@@ -70,7 +70,7 @@ AND (&&):
 | FALSE && FALSE | FALSE |  
 
 
-OR (||):
+OR (`||`):
 
 |Combination|Result|
 | --- | --- |
@@ -82,7 +82,7 @@ OR (||):
 We call these tables truth tables. Now what about XOR. Well XOR stands for exclusive or.
 When we use the exclusive or operator, we return true if the inputs are different:
 
-OR (^):
+OR (`^`):
 
 |Combination|Result|
 | --- | --- |
