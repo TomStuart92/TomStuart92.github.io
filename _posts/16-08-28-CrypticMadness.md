@@ -27,10 +27,10 @@ So far I've solved the first five problems of the first set, but lets look at th
 **Background:** Numbers. Numbers. Numbers. The numbers we're all familiar with, the good old 0-9, are whats called base 10. When you get to 9, you repeat again 10-19, then 20-29 and so on. This is so familiar to humans that we mostly can't imagine counting any other way. This probably has something to do with ten fingers, but thats for another time.
 
 However, if we think about it there's no reason that we need to stop at ten. We could reset at any arbitrary number. There are a whole range of these different systems using different bases:
-- Base 2 [Binary] - 0..1 then reset.
-- Base 8 [Octal] - 0..7 then reset.
-- Base 16 [Hexadecimal] - 0..F then reset.
-- Base 64 [Base 64] - 0..63 then reset
+- Base 2 [Binary] - 0..1 then reset.  
+- Base 8 [Octal] - 0..7 then reset.  
+- Base 16 [Hexadecimal] - 0..F then reset.  
+- Base 64 [Base 64] - 0..63 then reset.  
 
 The observant will notice that Hexadecimal uses letters to 'count' the numbers greater than ten. So to solve our problem we need to convert a number from Base 16 to Base 64. Luckily ruby gives us a number of built in operators to deal with such problems.  
 
