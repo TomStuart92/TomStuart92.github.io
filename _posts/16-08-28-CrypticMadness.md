@@ -26,7 +26,8 @@ So far I've solved the first five problems of the first set, but lets look at th
 
 **Background:** Numbers. Numbers. Numbers. The numbers we're all familiar with, the good old 0-9, are whats called base 10. When you get to 9, you repeat again 10-19, then 20-29 and so on. This is so familiar to humans that we mostly can't imagine counting any other way. This probably has something to do with ten fingers, but thats for another time.
 
-However, if we think about it there's no reason that we need to stop at ten. We could reset at any arbitrary number. There are a whole range of these different systems using different bases:
+However, if we think about it there's no reason that we need to stop at ten. We could reset at any arbitrary number. There are a whole range of these different systems using different bases:  
+
 - Base 2 [Binary] - 0..1 then reset.  
 - Base 8 [Octal] - 0..7 then reset.  
 - Base 16 [Hexadecimal] - 0..F then reset.  
@@ -157,3 +158,64 @@ p hex_string = ascii_string.unpack('H*')[0] #746865206b696420646f6e277420706c617
 p output #746865206b696420646f6e277420706c6179
 
 ```
+
+## Problem Three - Single Byte XOR
+
+**Problem:** The given hexadecimal string has been XOR'd against a single character. Find the key, decrypt the message.
+
+**Background:** So challenge three builds on our previous two problems. We're given a hex-encoded string, and told its been encoded against a single key.
+
+Luckily we know how to do an xor decryption using a key from problem two. So the basic outline of our solution is to decrypt the string against every possible single character. This character will be used against every character of the string. The output of this will be a series of strings which we need to rank as to how close they are to english.
+
+**Solution:**
+Here is the solution. I'll explain it below:
+```ruby
+string = '1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736'
+
+def hex_to_bytes(arg)
+   [arg].pack('H*')
+end
+
+def xor_byte_strings(xor1, xor2)
+  xored = xor1.chars.zip(xor2.chars).map do |c1, c2|
+    (c1.ord ^ c2.ord).chr
+  end
+  xored.join('')
+end
+
+def find_single_byte_xor(str)
+  results = (0x00..0xff).map do |c|
+    decoded = xor_byte_strings(str, c.chr * str.length)
+    [c, decoded, get_string_score(decoded)]
+  end
+  results.sort_by {|c, d, s| s}.reverse[0]
+end
+
+def get_string_score(str)
+  return -1 if str.chars.any? {|c| c.ord >= 0x80 || c.ord < 0x0a}
+  str.gsub(/[^a-zA-Z0-9 ]/, '').length.to_f / str.length.to_f
+end
+
+def find_single_byte_xor_hex(hexstr)
+  find_single_byte_xor(hex_to_bytes(hexstr))
+end
+
+p find_single_byte_xor_hex(string) #[88, "Cooking MC's like a pound of bacon", 0.9705882352941176]
+```
+To keep things more structured I've defined several functions here. The first is just to hex_to_bytes transformation using `.pack('H*')` that we've used before. The second is the function that return the xor combination of two strings.
+
+The other functions are were it gets a little more interesting. Lets start with the `find_single_byte_xor`.
+
+This function starts with a range from `0x00` to `0xff`. For those unfamiliar (which I assume is everyone, if you know hex character codes off the top of your head you need to get out.), these are the character codes covering the whole ASCII alphabet: [Link](http://www.ascii.cl/htmlcodes.htm). So we take the range of every character and use the map function, we decode our string using our helper function, passing in the string (str) and our character multiple times. We then place this in an array, where the first element is the character, the second is the decoded string, and the third is the string store, which comes from the last important function.
+
+So we have all our decoded strings, but we need a way to rank them. This solution uses a fairly simple ranking method. First we give it a score of -1, if it includes any character greater than 0x80 or less than 0x0a. In ASCII, this removes any characters other than those we'd expect to find in a normal sentence.
+
+For the remaining sentences, we score them on the percentage of the characters that are 0-9, a-z or A-Z. We expect our decrypted sentence to be almost entirely composed of these letters. So we rank our strings according to this score, and hope the one with the highest score is the one we're after.
+
+The last method just combines the hex_decode with the single_byte_xor method, and this is the method we call.
+
+When the dust has settled, and we examine the result we're left with a single array:  
+`[88, "Cooking MC's like a pound of bacon", 0.9705882352941176]`   
+We've got our key - the character ^.   
+We've got our decrypted string - 'Cooking MC's like a pound of bacon' (Thanks Vanilla Ice)
+And we've got our score - 0.971 (which is pretty close to the maximum of one!)
