@@ -18,7 +18,7 @@ These challenges are an entirely different kettle of fish. They are entirely pra
 
 I've found them particularly challenging to date, because of my inexperience with both programming and cryptology. So I'm writing this blog post, as in my view, there's no better way to improve your understanding of a topic then to talk to someone about it. Even if its just the vacuum of the internet.
 
-So far I've solved the first five problems of the first set, but lets look at the first two in a bit of detail. I'll add more in a later post.
+So far I've solved the first five problems of the first set, but lets look at the first three in a bit of detail. I'll add more in a later post.
 
 ## Problem One - Convert hex to base64
 
