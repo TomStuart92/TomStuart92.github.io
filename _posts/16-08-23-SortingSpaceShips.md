@@ -1,6 +1,6 @@
 ---
 title: Sorting Spaceships
-excerpt: "In this blog post we explore sorting with the spaceship operator!"
+excerpt: "In this blog post we explore the spaceship operator."
 teaser: spaceship.jpg
 header:
   overlay_image: spaceship.jpg
