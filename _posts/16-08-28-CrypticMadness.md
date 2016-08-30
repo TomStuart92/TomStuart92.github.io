@@ -169,6 +169,7 @@ Luckily we know how to do an xor decryption using a key from problem two. So the
 
 **Solution:**
 Here is the solution. I'll explain it below:
+
 ```ruby
 string = '1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736'
 
@@ -202,6 +203,7 @@ end
 
 p find_single_byte_xor_hex(string) #[88, "Cooking MC's like a pound of bacon", 0.9705882352941176]
 ```
+
 To keep things more structured I've defined several functions here. The first is just to hex_to_bytes transformation using `.pack('H*')` that we've used before. The second is the function that return the xor combination of two strings.
 
 The other functions are were it gets a little more interesting. Lets start with the `find_single_byte_xor`.
