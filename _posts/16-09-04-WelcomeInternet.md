@@ -144,7 +144,20 @@ end
 
 This route is activated whenever we receive a get request for the homepage, which is found at '/'. When it receives this kind of request it renders the view home.erb, and in so doing, doesn't talk to the model at all. We don't know anything about the user at the moment, so this makes sense.
 
-So all we need to do is add a file into views called home.erb. Lets write this in html:
+So all we need to do is add a file into views called home.erb. But before we begin lets write a feature test for this. We visit the root path, fill in the form with our name, and then expect the new page to have content 'Hello <name>, please choose your move:'
+
+``` ruby
+require 'spec_helper.rb'
+feature 'New User arrives at root page' do
+  scenario 'User enters information' do
+    visit('/')
+    fill_in(:player_name, with: 'Reginald')
+    click_button('single')
+    expect(page).to have_content('Hello Reginald, please choose your move:')
+  end
+end
+```
+Having been good TDD users, lets write the view in html:
 
 ```html
 <html>
@@ -174,6 +187,41 @@ This tells the browser what to do when you press the submit button. In our case 
 
 POST requests are the second most common type of HTTP request, and are used when we send data to the server. The alternative are GET requests, which you send whenever you simply request a page, for example when you first visit the homepage.
 
-With this in place we can now run a local version of our application using `rackup` and then visiting `localhost:9292` in our browser. Pretty cool right!
+With this in place we can now run a local version of our application using `rackup` and then visiting `localhost:9292` in our browser. The page will load, but once we hit singe player we get an error message!
 
 ## Hit the Catwalk - Our first Model
+
+Okay so we've got a form that sends a request to POST /game. Where to from here? Well clearly we need to define a route in our controller:
+
+```ruby
+class RPS < Sinatra::Base
+# Omitted Content...
+enable :sessions
+
+post '/game' do
+  session[:player_name] = params[:player_name]
+  session[:gametype] = params[:gametype]
+  @player_name = session[:player_name]
+  erb :game
+end
+```
+
+There's a little extra going on here. We've added a line `enable :sessions`. What this does it allow us to create a session, which stores data for the whole time a user is on our website. In the session we save the players name, and game type. These come from the params which are provided when you filled in the form on the homepage. We save this to an instance variable. Any instance variable we define here, will be accessible by the view we render, so we can pass on the name to the view.
+
+Once we've saved these options, we direct you to the game page. This is the page that will allow us to choose which option we want to choose (Rock, Paper or Scissors). Let's finish passing our earlier feature test. Here's the html we need:
+
+```html
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class = 'header'>
+      <h2>Hello,<%=@player_name%> please choose your move:</h2>
+    </div>
+  </body>
+</html>
+```
+
+The player_name variable is included in a <%= %> tag. This is an embedded ruby (.erb) tag that tells the framework to evaluate the contents as normal ruby. So in this case it places the value of `@player_name` into the view.
+With this our feature test should pass, and we have completed our first user story.
