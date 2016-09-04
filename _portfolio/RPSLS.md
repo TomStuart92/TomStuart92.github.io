@@ -1,6 +1,6 @@
 ---
-title: "Foo Bar Identity"
-excerpt: "Foo Bar design system including logo mark, website design, and branding applications."
+title: "Rock Paper Scissors Lizard Spock"
+excerpt: "Single and Multi Player Rock Paper Scissors Game built on the Sinatra Framework."
 values:
   layout: single
   author_profile: false
