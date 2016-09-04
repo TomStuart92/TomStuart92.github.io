@@ -1,6 +1,6 @@
 ---
-title: Welcome to the Internet
-excerpt: "In this blog post we develop our first Website"
+title: Welcome to the Internet - Part One
+excerpt: "In this blog post we begin development of our first Website"
 teaser: internet.jpg
 header:
   overlay_image: internet.jpg
@@ -40,9 +40,9 @@ Bonus level 2: Rock, Paper, Scissors, Spock, Lizard
 Use the special rules ( you can find them here http://en.wikipedia.org/wiki/Rock-paper-scissors-lizard-Spock )
 ```
 
-As with the airport challenge let's use TDD to build this website. But first we'll need to take a quick detour to look at Capybara and Sinatra.
+As with the airport challenge let's use TDD to build this website. This will be a series of blogposts exploring this solution. Today we'll look at registering your name. But first we'll need to take a quick detour to look at Capybara and Sinatra.
 
-My final solution is hosted here if you care to see the final result first - [Rock Paper Scissors Lizard Spock](https://stark-shelf-40156.herokuapp.com/)
+My final solution is hosted here if you care to see the final result first - [Rock Paper Scissors Lizard Spock](https://stark-shelf-40156.herokuapp.com/).
 
 ## Zoology for Beginners - Capybara for tests.
 
