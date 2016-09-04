@@ -42,6 +42,8 @@ Use the special rules ( you can find them here http://en.wikipedia.org/wiki/Rock
 
 As with the airport challenge let's use TDD to build this website. But first we'll need to take a quick detour to look at Capybara and Sinatra.
 
+My final solution is hosted here if you care to see the final result first - [Rock Paper Scissors Lizard Spock](https://stark-shelf-40156.herokuapp.com/)
+
 ## Zoology for Beginners - Capybara for tests.
 
 So hopefully you've come across RSpec before. If not I recommend going to look at the Taking to the Skies [blog post](http://tomstuart92.github.io/Airports), which has a gentle introduction to Test Driven Development using RSpec.
@@ -108,7 +110,7 @@ Alright, so we know a little of Sinatra and Capybara. But where do we start when
 
 Lets look at the basic structure of a website. We're going to use something called the Model-Controller-View structure (MCV):
 
-![MCV Structure]({{ site.url }}/images/mcv.png)
+![MCV Structure]({{ site.url }}/images/mcv.png){: .center-image }
 
 All looks a little complicated doesn't it. Lets walk through what happens when you send a request to a website. Lets say you press a button to choose rock in our RPS game. You the client, send a request for a webpage to the server which holds that page (1). The dispatcher converts this from HTTP which is the language of the internet, to whichever language the server uses, in our case ruby, and passes it on to the controller (2).
 
