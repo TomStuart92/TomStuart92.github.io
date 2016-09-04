@@ -22,7 +22,7 @@ gallery:
     image_path: rps_multi.png
 ---
 
-Project is hosted on Heroku - [Link](https://stark-shelf-40156.herokuapp.com/)
+Project is hosted on Heroku - [Link](https://stark-shelf-40156.herokuapp.com/)  
 Github Repository - [Link](https://github.com/TomStuart92/rps-challenge)
 
 As part of the Makers Academy course we were tasked with creating a Rock Paper Scissors game. This solution makes use of the Sinatra framework for a streamlined deployment process, and relies on Capybara/RSpec for testing.
@@ -31,6 +31,6 @@ The application supports both single player against a randomised opponent, or tw
 
 {% include gallery caption="This is a sample gallery to go along with this case study." %}
 
-Overall, I'm happy with how the project turned out. The visual elements could use improving, perhaps by using bootstrap or similar. However I'm happy that the Back-End is sufficiently well developed for a week three project. 
+Overall, I'm happy with how the project turned out. The visual elements could use improving, perhaps by using bootstrap or similar. However I'm happy that the Back-End is sufficiently well developed for a week three project.
 
 Moving forward I hope to build this into a truly multiplayer experience to allow for users to play each other over the internet. This will require me to explore Sinatra's use of websockets.
