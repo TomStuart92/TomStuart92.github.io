@@ -191,7 +191,7 @@ POST requests are the second most common type of HTTP request, and are used when
 
 With this in place we can now run a local version of our application using `rackup` and then visiting `localhost:9292` in our browser. The page will load, but once we hit singe player we get an error message!
 
-## Hit the Catwalk - Our first Model
+## Hitting the Big Time - Your Name on the Internet
 
 Okay so we've got a form that sends a request to POST /game. Where to from here? Well clearly we need to define a route in our controller:
 
@@ -227,3 +227,5 @@ Once we've saved these options, we direct you to the game page. This is the page
 
 The player_name variable is included in a <%= %> tag. This is an embedded ruby (.erb) tag that tells the framework to evaluate the contents as normal ruby. So in this case it places the value of `@player_name` into the view.
 With this our feature test should pass, and we have completed our first user story.
+
+Let's leave it here for now; that was a lot of new content! I will continue exploring this problem in my next post. In the meantime, try not getting too lost in the rabbit-hole of the internet. 
