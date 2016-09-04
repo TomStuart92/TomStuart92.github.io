@@ -5,15 +5,14 @@ layout: single
 author_profile: false
 share: true
 header:
-  image: rps_single.png
   teaser: rps_single.png
 sidebar:
   - title: "Role"
-    image: http://placehold.it/350x250
+    image: rps_single.png
     image_alt: "logo"
-    text: "Designer, Front-End Developer"
-  - title: "Responsibilities"
-    text: "Reuters try PR stupid commenters should isn't a business model"
+    text: "Designer, Front-End and Back-End Developer"
+  - title: "Background"
+    text: "Week Three Makers Academy Challenge"
 gallery:
   - url: rps_home.png
     image_path: rps_home.png
