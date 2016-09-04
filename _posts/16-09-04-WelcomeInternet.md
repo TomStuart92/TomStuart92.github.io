@@ -174,4 +174,6 @@ This tells the browser what to do when you press the submit button. In our case 
 
 POST requests are the second most common type of HTTP request, and are used when we send data to the server. The alternative are GET requests, which you send whenever you simply request a page, for example when you first visit the homepage.
 
-With this in place we can now run a local version of our application using `rackup` and then visiting localhost:9292 in our browser. Pretty cool right!
+With this in place we can now run a local version of our application using `rackup` and then visiting `localhost:9292` in our browser. Pretty cool right!
+
+## Hit the Catwalk - Our first Model
