@@ -23,6 +23,7 @@ gallery:
 ---
 
 Project is hosted on Heroku - [Link](https://stark-shelf-40156.herokuapp.com/)  
+
 Github Repository - [Link](https://github.com/TomStuart92/rps-challenge)
 
 As part of the Makers Academy course we were tasked with creating a Rock Paper Scissors game. This solution makes use of the Sinatra framework for a streamlined deployment process, and relies on Capybara/RSpec for testing.
