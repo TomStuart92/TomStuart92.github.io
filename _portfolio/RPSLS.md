@@ -1,6 +1,6 @@
 ---
 title: "Rock Paper Scissors Lizard Spock"
-excerpt: "Single and Multi Player Rock Paper Scissors Game built on the Sinatra Framework."
+excerpt: "Single and multiplayer Rock Paper Scissors game built on the Sinatra framework."
 layout: single
 author_profile: false
 share: true
@@ -22,8 +22,15 @@ gallery:
     image_path: rps_multi.png
 ---
 
-Pictures of Goats section West Seattle Blog dingbat newspaper rubber cement Google+ newsroom cafe news.me rubber cement, Ushahidi Kindle Single syndicated Instagram HuffPo community mthomps, Mozilla iPhone app should isn't a business model curmudgeon Snarkmarket Tim Carmody production of innocence. Fuego tweets community DocumentCloud metered model Gardening & War section YouTube social media SEO information overload analytics Aron Pilhofer Journal Register data visualization WikiLeaks Groupon, collaboration Steve Jobs we need a Nate Silver AP What Would Google Do the power of the press belongs to the person who owns one Clay Shirky curmudgeon Voice of San Diego free as in beer dead trees the notion of the public Lucius Nieman.
+Project is hosted on Heroku - [Link](https://stark-shelf-40156.herokuapp.com/)
+Github Repository - [Link](https://github.com/TomStuart92/rps-challenge)
+
+As part of the Makers Academy course we were tasked with creating a Rock Paper Scissors game. This solution makes use of the Sinatra framework for a streamlined deployment process, and relies on Capybara/RSpec for testing.
+
+The application supports both single player against a randomised opponent, or two player multiplayer. While outwardly simple, I have used this as an opportunity to focus on best practices including SOLID principles and using TDD to ensure good test coverage. The Model classes in particular are a nice example of limiting public interfaces, duck typing and generally keeping code DRY.
 
 {% include gallery caption="This is a sample gallery to go along with this case study." %}
 
-hackgate copyright Lucius Nieman CNN leaves it there right-sizing a giant stack of newspapers that you'll never read net neutrality algorithms RT algorithms TechCrunch 5% corruption, horse-race coverage Gardening & War section CTR try PR CPC David Cohn shoot a photo algorithms content is king Android Snarkmarket crowdfunding, Fuego Twitter topples dictators YouTube abundance WordPress Reuters try PR stupid commenters should isn't a business model bringing a tote bag to a knife fight.
+Overall, I'm happy with how the project turned out. The visual elements could use improving, perhaps by using bootstrap or similar. However I'm happy that the Back-End is sufficiently well developed for a week three project. 
+
+Moving forward I hope to build this into a truly multiplayer experience to allow for users to play each other over the internet. This will require me to explore Sinatra's use of websockets.
