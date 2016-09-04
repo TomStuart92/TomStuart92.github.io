@@ -4,7 +4,7 @@ excerpt: "In this blog post we explore the spaceship operator."
 teaser: spaceship.jpg
 header:
   overlay_image: spaceship.jpg
-  overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
+  overlay_filter: 0.5
 ---
 ## Sorting Objects
 
