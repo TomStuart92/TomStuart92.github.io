@@ -1,5 +1,5 @@
 ---
-title: Grease 2 and other CRUD'y SeQueLs
+title: Grease II and other CRUD'y SeQueLs
 excerpt: "In this blog we explore some basic SQL."
 teaser: data.png
 header:
@@ -8,15 +8,15 @@ header:
 ---
 ## Introduction
 
-Before we start, lets agree on one thing. Grease 2 was an absolute train wreck. If you disagree, the little red button in the corner, can be used to raise your disagreements.
+Before we start lets agree on one thing. Grease II was an absolute train wreck. If you disagree, the little red button in the corner can be used to raise your objections.
 
-Now on to the matter at hand. This is going to be a short post exploring the CRUD functions of databases, and how we can use SQL to carry them out.
+Now on to the matter at hand. This is going to be a short post exploring the CRUD functions of databases and how we can use SQL to carry them out.
 
 If those acronyms mean nothing to you, fear not. It's nothing a good example can't explain!
 
 ## Databases
 
-Lets start with databases. A database is simply an organised store of data, with some sort of persistence. By persistence we mean that the data is stored, even after the program stops running.
+Lets start with databases. A database is simply an organised store of data with some sort of persistence. By persistence we mean that the data is stored even after the program stops running.
 
 There are two main types of databases; relational and non-relational. For our purposes we'll stick to relational databases today. Non-relational databases are really interesting though, and I recommend you have a look into them!
 
@@ -166,6 +166,6 @@ students=# DELETE FROM students WHERE age = 14;
   2 | Tom  |  17 |   12 | A+
 (1 row)
 ```
-With that we've addressed the four main SQL data operations. Of course, there are many other SQL commands out there. I'll leave it to you to read into this further if you are so inclined. Anyone working with data should know about the `DROP TABLE` command so as not to use it wrongly.
+With that we've addressed the four main SQL data operations. Of course, there are many other SQL commands out there. I'll leave it to you to read into this further if you are so inclined. Anyone working with data should know about the `DROP TABLE` command so as not to use it wrongly (yes, I'm speaking from personal experience!).
 
-Otherwise joins are a  powerful tool, to connect data in different tables. However the true power of SQL is in composite functions where you combine selects, inserts and others. If you can imagine the data transformation you can probably code it!
+Otherwise joins are a  powerful tool used to connect data in different tables. However the true power of SQL is in composite functions where you combine selects, inserts and others. If you can imagine the data transformation you can probably code it!
