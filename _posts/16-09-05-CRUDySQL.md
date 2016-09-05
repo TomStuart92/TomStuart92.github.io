@@ -166,6 +166,6 @@ students=# DELETE FROM students WHERE age = 14;
   2 | Tom  |  17 |   12 | A+
 (1 row)
 ```
-With that we've addressed the four main SQL data operations. Of course, there are many other SQL commands out there. I'll leave it to you to read into this further if you are so inclined. Anyone working with data should know about the `DROP TABLE` command so as not to use it wrongly (yes, I'm speaking from personal experience!).
+With that we've addressed the four main SQL data operations. Of course, th  ere are many other SQL commands out there. I'll leave it to you to read into this further if you are so inclined. Anyone working with data should know about the `DROP TABLE` command so as not to use it wrongly (yes, I'm speaking from personal experience!).
 
 Otherwise joins are a  powerful tool used to connect data in different tables. However the true power of SQL is in composite functions where you combine selects, inserts and others. If you can imagine the data transformation you can probably code it!
