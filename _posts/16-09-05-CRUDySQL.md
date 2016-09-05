@@ -20,11 +20,11 @@ Lets start with databases. A database is simply an organised store of data, with
 
 There are two main types of databases; relational and non-relational. For our purposes we'll stick to relational databases today. Non-relational databases are really interesting though, and I recommend you have a look into them!
 
-So relational databases. The mental model I've always used is nothing more than a big excel spreadsheet. We have rows that contain data entries, and columns that hold the different variables we associate with each entry. Relational databases are really good for storing data which is heavily related to each other.
+So relational databases. The mental model I've always used is nothing more than a collection of big excel spreadsheets. The individual spreadsheets are called tables. In these, we have rows that contain entries, and columns that hold the different variables we associate with each entry. Relational databases are really good for storing data which is heavily related to each other.
 
 Before we continue, a note on Database Management Systems. This is the system that holds the database and lets you interact with it. I've used PostgreSQL for the following. However, there are quite a few different systems you can use though including MySQL and SQLite. This [blog](https://www.digitalocean.com/community/tutorials/sqlite-vs-mysql-vs-postgresql-a-comparison-of-relational-database-management-systems) does a good job explaining the differences.
 
-Lets look an an example of a database. Let's look at a database to hold student data. It will have names, ages, year group and the last exam grade the student received.
+Lets look an an example of a database table used to hold student data. It will have names, ages, year group and the last exam grade the student received.
 
 ```
 id  |  name  | age | year | grade
@@ -34,13 +34,13 @@ id  |  name  | age | year | grade
   3 | Sophie |  14 |    9 | C
 ```
 
-The relational structure of this database, should make sense. It's just a table at the end of the day; nothing too fancy!
+The relational structure of this database should make sense. It's just a table at the end of the day; nothing too fancy!
 
 ## SQL - The Sequel...
 
-Alright, so we've looked at a database. But what about SQL? You never told us what it stood for. Well SQL stands for Structured Query Language. It's the language we use for working with these sorts of databases. It's very old (first seen in the 1970's), a little difficult to use, and can be very cranky. But when it works, it makes using data a pleasure.
+Alright, so we've looked at a databases and tables. But what about SQL? You never told us what it stood for. Well SQL stands for Structured Query Language. It's the language we use for working with these sorts of databases. It's very old (first seen in the 1970's), a little difficult to use, and can be very cranky. But when it works, it makes using data a pleasure.
 
-I've always thought the best way to learn a new language is to jump straight in, so lets look now at building our database.
+I've always thought the best way to learn a new language is to jump straight in, so lets look now at building our students database.
 
 ## Woodworking 101 - Building your first table
 
@@ -53,7 +53,7 @@ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
 
 Once we've done this, we should be able to open up Postgres using psql. This is the command line interface that allows us to interface with our database.
 
-Our first step is to build a database. Our database will be called students. The command to build a new database is quite simple:
+Our first step is to build a database called students. The command to build a new database is quite simple:
 
 ```SQL
 # CREATE DATABASE students;
@@ -79,7 +79,7 @@ Now we're ready to make our first table. In SQL we use the `CREATE TABLE` comman
 students=# CREATE TABLE STUDENTS(ID INT PRIMARY KEY, NAME TEXT, AGE INT, YEAR INT, GRADE TEXT);
 ```
 
-In databases, A primary key is a unique identifier which we assign to each data entry. It must be unique and cannot be null.
+In databases, a primary key is a unique identifier which we assign to each data entry. It must be unique and cannot be null.
 
 ```
 id | name | age | year | grade
@@ -87,7 +87,7 @@ id | name | age | year | grade
 (0 rows)
 ```
 
-This command creates our table, however we have no data in it. It's just an empty shell. To add data we need to turn to out other acronym. I'm sorry, but this blog is about to turn a little CRUD'y.
+This command creates our table, however we have no data in it. It's just an empty shell. To add data we need to turn to our other acronym. I'm sorry, but this blog is about to turn a little CRUD'y.
 
 ## CRUD - Create, Read, Update and Destroy
 
