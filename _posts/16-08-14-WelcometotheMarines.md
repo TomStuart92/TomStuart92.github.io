@@ -81,36 +81,34 @@ So whats the next step? Well we want to replace every digit in the pin code our 
 The way I solved this was to break the pin we are given into each character using the  `String#split` method. We then have an array which holds each character as an element. Then we can use the `Array#map` method, to replace each element with its value in our combos hash:
 
 ```ruby
-2.2.4 :001 > def get_pins(observed)
-2.2.4 :002?>     combos = {
-2.2.4 :003 >         "1" => ["1","2","4"],
-2.2.4 :004 >         "2" => ["1","2","3","5"],
-2.2.4 :005 >         "3" => ["2","3","6"],
-2.2.4 :006 >         "4" => ["1","4","5","7"],
-2.2.4 :007 >         "5" => ["2","4","5","6","8"],
-2.2.4 :008 >         "6" => ["3","5","6","9"],
-2.2.4 :009 >         "7" => ["4","7","8"],
-2.2.4 :010 >         "8" => ["5","7","8","9","0"],
-2.2.4 :011 >         "9" => ["6","8","9"],
-2.2.4 :012 >         "0" => ["8","0"] }
-2.2.4 :013?>   observed.split("").map{|x| combos[x]}
-2.2.4 :014?>   end
- => :get_pins
-2.2.4 :015 > get_pins('1234')
- => [["1", "2", "4"], ["1", "2", "3", "5"], ["2", "3", "6"], ["1", "4", "5", "7"]]
- ```
+def get_pins(observed)
+  combos = {
+    "1" => ["1","2","4"],
+    "2" => ["1","2","3","5"],
+    "3" => ["2","3","6"],
+    "4" => ["1","4","5","7"],
+    "5" => ["2","4","5","6","8"],
+    "6" => ["3","5","6","9"],
+    "7" => ["4","7","8"],
+    "8" => ["5","7","8","9","0"],
+    "9" => ["6","8","9"],
+    "0" => ["8","0"] }
+  observed.split("").map{|x| combos[x]}
+end
+get_pins('1234') => [["1", "2", "4"], ["1", "2", "3", "5"], ["2", "3", "6"], ["1", "4", "5", "7"]]
+```
 
- As you can see, the first element of our new array has the values 1, 2 and 4 - the possible values of the key one. The same is true of the rest of the array.
+As you can see, the first element of our new array has the values 1, 2 and 4 - the possible values of the key one. The same is true of the rest of the array.
 
- So we've made headway. We now have an array which holds all the possibilities of each number in the pin. Now we just need to find a way to combine them. We need a method that will go through the array and give us every combination, i.e. 1121, 1124, 1125 and so on.
+So we've made headway. We now have an array which holds all the possibilities of each number in the pin. Now we just need to find a way to combine them. We need a method that will go through the array and give us every combination, i.e. 1121, 1124, 1125 and so on.
 
- This is something I struggled with for a long time. However a memory of first year university maths ended up saving me. Suffice it to say, I didn't think that Matrix Multiplication would be useful in this problem but alas he we are. The `Array#product` method in ruby, allows us to combine two arrays and return the cartesian product. For those less mathematically inclined, all you need to know is that if we have two arrays it gives us the combination of the two:
+This is something I struggled with for a long time. However a memory of first year university maths ended up saving me. Suffice it to say, I didn't think that Matrix Multiplication would be useful in this problem but alas he we are. The `Array#product` method in ruby, allows us to combine two arrays and return the cartesian product. For those less mathematically inclined, all you need to know is that if we have two arrays it gives us the combination of the two:
 
- ```ruby
- a = [1,2]
- b = [3,4]
- a.product(b) => [[1, 3], [1, 4], [2, 3], [2, 4]]
- ```
+```ruby
+a = [1,2]
+b = [3,4]
+a.product(b) => [[1, 3], [1, 4], [2, 3], [2, 4]]
+```
 
 We don't just want to combine two arrays though, we have four; one for each number in our pin code. We can get around this by combining the product method to the `Array#reduce` method. This method allows us to reduce an array to a single item by applying an operation to each pair of elements in turn:
 
@@ -130,7 +128,7 @@ get_pins('1234') => [[[["1", "1"], "2"], "1"], [[["1", "1"], "2"], "4"], [[["1",
 
  I've had to truncate the result, because it's rather long and complicated, but suffice it to say each block of four digits now represents a possible combination. However it's really hard to read, so the last thing we need to do it to join the numbers back together to give us our final pin codes. We can use `String#join` along with map again to do this:
 
- ```ruby
+```ruby
 def get_pins(observed)
   #continued from above
   observed.split("").map{|x| combos[x]}.reduce(&:product).map(&:join)
@@ -138,5 +136,6 @@ end
 
 get_pins('1234')
 => ["1121", "1124", "1125", "1127", "1131", "1134", "1135", "1137", "1161", "1164", "1165", "1167", "1221", "1224", "1225", "1227", "1231", "1234", "1235", "1237", "1261", "1264", "1265", "1267", "1321", "1324", "1325", "1327", "1331", "1334", "1335", "1337", "1361", "1364", "1365", "1367", "1521", "1524", "1525", "1527", "1531", "1534", "1535", "1537", "1561", "1564", "1565", "1567", "2121", "2124", "2125", "2127", "2131", "2134", "2135", "2137", "2161", "2164", "2165", "2167", "2221", "2224", "2225", "2227", "2231", "2234", "2235", "2237", "2261", "2264", "2265", "2267", "2321", "2324", "2325", "2327", "2331", "2334", "2335", "2337", "2361", "2364", "2365", "2367", "2521", "2524", "2525", "2527", "2531", "2534", "2535", "2537", "2561", "2564", "2565", "2567", "4121", "4124", "4125", "4127", "4131", "4134", "4135", "4137", "4161", "4164", "4165", "4167", "4221", "4224", "4225", "4227", "4231", "4234", "4235", "4237", "4261", "4264", "4265", "4267", "4321", "4324", "4325", "4327", "4331", "4334", "4335", "4337", "4361", "4364", "4365", "4367", "4521", "4524", "4525", "4527", "4531", "4534", "4535", "4537", "4561", "4564", "4565", "4567"]
- ```
-We have our list of pins! Only 159 possible combinations to try. Shouldn't take too long at all. 
+```
+
+We have our list of pins! Only 159 possible combinations to try. Shouldn't take too long at all.
