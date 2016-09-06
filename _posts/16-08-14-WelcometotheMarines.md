@@ -27,7 +27,7 @@ So [codewars](www.codewars.com) is an incredible resource for anyone learning to
 
 Each challenge is graded for difficulty so it's a great place to start if you have very little experience. However the best part is that once you solve the problem, you get to see everyone else's solutions. This is a great way to see new ways to approach a problem.
 
-One particular challenge consumed a fair amount of my time this week. The [kata](https://www.codewars.com/kata/5263c6999e0f40dee200059d), description is as follows:
+One particular challenge consumed a fair amount of my time this week. The [kata](https://www.codewars.com/kata/5263c6999e0f40dee200059d) description is as follows:
 
 ```
 Alright, detective, one of our colleagues successfully observed our target person, Robby the robber. We followed him to a secret warehouse, where we assume to find all the stolen stuff. The door to this warehouse is secured by an electronic combination lock. Unfortunately our spy isn't sure about the PIN he saw, when Robby entered it.
