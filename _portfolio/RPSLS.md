@@ -1,6 +1,6 @@
 ---
-title: "Rock Paper Scissors Lizard Spock"
-excerpt: "Single and multiplayer Rock Paper Scissors game built on the Sinatra framework."
+title: "Rock Paper Scissors "
+excerpt: "Single and multiplayer game built in the Sinatra framework."
 layout: single
 author_profile: false
 share: true
