@@ -3,7 +3,7 @@ title: Grease II and other CRUD'y SeQueLs
 excerpt: "In this blog we explore some basic SQL."
 teaser: data.png
 header:
-  overlay_image: data.png
+  overlay_image: grease.jpg
   overlay_filter: 0.5
 ---
 ## Introduction
