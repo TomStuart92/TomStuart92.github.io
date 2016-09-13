@@ -14,15 +14,21 @@ Yes you read that correctly. The intersection of feminism, equality and politics
 
 # Yes, I am not a feminist
 
-Ok. Ask yourself why do we have feminism? Generally your answer will mention equality. At the end of the day we have feminism because we don't have equality.
+Why do we have feminism? Generally your answer will have some mention equality. At the end of the day we have feminism because we don't have equality.
 
-So how can I say I am not a feminist, but agree that we should have equality? Well fundamentally all the issues that face women in todays society stem from the fact they do not have an equal voice.
+Our parliament is 29% percent women in the Commons and 26% in the Lords. The boards of almost every major corporation are dominated by men. The pay gap is very real and women are severely underrepresented in STEM careers. And that's not even to mention the fact that in the UK 1.4 million women suffer domestic abuse each year. Two women a week die at the hands of their partners.
 
-Our parliament is 29% percent women in the Commons and 26% in the Lords. The boards of almost every major corporation are dominated by men. I've heard it said that if you set up a charity for womens issues, in the blink of an eye you'll have a man in charge.
+I am not here to argue that we live in a deeply unfair, unequal, and generally not very nice society. I state unequivocally that feminism needs to exist, and we have a long way to go before we can say we have an equal society.
 
-So to my earlier point, the reason I refuse to call myself a feminist, is that fundamentally this dilutes a movement that exists to give women a voice. By using the labe
+But to my earlier point, the reason I refuse to call myself a feminist, is that fundamentally this dilutes a movement that exists to give women a voice. We already see that it has become almost fashionable for men to call themselves feminists. When a group loses its identity it ceases to be a meaningful or useful entity.
 
-I would call myself an ardent supporter of feminists. But I would never call myself a feminist.
+Third wave feminism has already become wildly diverse. We have a schism at the centre as it rightly tries to become intersectional, while the peripheries are involved in new struggles daily. While every one of these struggles is a cause that needs fighting, by loosing the single focus of earlier waves, feminism risks becoming a church for all people, but incapable of driving real change.
+
+It's this last point that really drives home why I think it's important that feminism remains an arena where women have the only voice.
+
+For us to have equality, men have to loose. We have to loose the privileged position we've had since the start of human society. We have to learn that its ok not to be the loudest speaker, that listening is more important than talking. If every man can simply call himself a feminist and not actually address the fundamental structural issues we will never have true equality.
+
+So thats why I would call myself an ardent supporter of feminists. But I would never call myself a feminist.
 
 ## Women and Tech
 
