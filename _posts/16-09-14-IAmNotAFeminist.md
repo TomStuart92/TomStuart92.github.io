@@ -40,4 +40,4 @@ Solutions like gender equality targets, specific female only scholarships and fe
 
 So while providing incentives to adults to pursue a career in tech may make us feel like we're addressing the issue, if we want to get serious we need to start championing our causes before kids even hit GCSE's. I'd love to see our tech community get involved at a grassroots level.
 
-![Gender Split]({{ site.url }}/images/gender_split.png)
+![Gender Split]({{ site.url }}/images/gender_stem.png)
