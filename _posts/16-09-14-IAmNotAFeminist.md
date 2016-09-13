@@ -32,4 +32,12 @@ So thats why I would call myself an ardent supporter of feminists. But I would n
 
 ## Women and Tech
 
-So to bring this back to the point of this blog I'd like to close with a few thoughts on the current state of the tech industry. Please be reminded that I have exactly zero experience actually working in such an industry, so this is the view of an outsider.
+So to bring this back to the point of this blog I'd like to close with a few thoughts on the current state of the tech industry. Please be reminded that I have exactly zero experience actually working in such an industry, so this is very much the view of an outsider.
+
+That said, I want to dive straight to the heart of the issue. It's pretty clear that there is a real issue with the gender balance in this industry. While there are definitely companies out there that have taken a stand on the issue ([Red Badger](https://red-badger.com/) immediately spring to mind), we need to be careful that we're not just fudging a quick solution so that we can ignore the wider problem.
+
+Solutions like gender equality targets, specific female only scholarships and female focuses spaces all have there merits. But none of the fix the inherent structural problem we have. Simply we have a gender bias at the earliest age. Young girls are less likely to study STEM subjects at GCSE/A-level then boys. In the case of Computing over 90% of entrants in 2014 were male. Unless we can change this we will be fighting an un-winnable battle.
+
+So while providing incentives to adults to pursue a career in tech may make us feel like we're addressing the issue, if we want to get serious we need to start championing our causes before kids even hit GCSE's. I'd love to see our tech community get involved at a grassroots level.
+
+![Gender Split]({{ site.url }}/images/gender_split.png)
