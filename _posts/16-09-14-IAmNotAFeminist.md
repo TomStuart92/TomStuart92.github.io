@@ -38,6 +38,6 @@ That said, I want to dive straight to the heart of the issue. It's pretty clear 
 
 Solutions like gender equality targets, specific female only scholarships and female focuses spaces all have there merits. But none of the fix the inherent structural problem we have. Simply we have a gender bias at the earliest age. Young girls are less likely to study STEM subjects at GCSE/A-level then boys. In the case of Computing over 80% of entrants in 2014 were male. Unless we can change this we will be fighting an un-winnable battle.
 
-So while providing incentives to adults to pursue a career in tech may make us feel like we're addressing the issue, if we want to get serious we need to start championing our causes before kids even hit GCSE's. I'd love to see our tech community get involved at a grassroots level.
-
 ![Gender Split]({{ site.url }}/images/gender_stem.png)
+
+So while providing incentives to adults to pursue a career in tech may make us feel like we're addressing the issue, if we want to get serious we need to start championing our causes before kids even hit GCSE's. I'd love to see our tech community get involved at a grassroots level.
