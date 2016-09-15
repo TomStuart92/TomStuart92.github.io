@@ -17,7 +17,7 @@ I've drunk an unhealthy amount of coffee; but done an equally healthy amount of 
 
 I've met the most incredible people, and had the opportunity to work with someone new everyday.
 
-I've laughed, coded, died a little in side, and then been prouder of myself then I have ever been before.
+I've laughed, coded, died a little inside, and then been prouder of myself then I have ever been before.
 
 It's been a hell of a first month.
 
@@ -36,6 +36,6 @@ The guys at Makers Academy have built an environment that almost forces you to s
 
 We've also just starting getting mentee's from the cohort below. It's crazy to think we're already in a position to be guiding a new group through the course. This is another strength of the Makers program and one I can not speak highly enough of. Our seniors have been incredibly helpful, both with coding issues, but also wider insights into coding. I hope we can be just a useful to the cohort below.
 
-I can not offer any higher praise than to say this course has surpassed every one of my expectations so far. For anyone who is interested in learning to code, I would have zero hesitation in recommending Makers. If you are willing to work, you will not find a better environment in which to do it. 
+I can not offer any higher praise than to say this course has surpassed every one of my expectations so far. For anyone who is interested in learning to code, I would have zero hesitation in recommending Makers. If you are willing to work, you will not find a better environment in which to do it.
 
 The course is only going to get harder from here. Next week is Javascript week, and our first chance to learn a new language. Its going to be a challenge but one I think I'm ready for.
