@@ -1,6 +1,6 @@
 ---
 title: Welcome to the Internet - Part One
-excerpt: "In this blog post we begin development of our first Website"
+excerpt: "Let's start building our first website"
 teaser: internet.jpg
 header:
   overlay_image: internet.jpg
@@ -228,4 +228,4 @@ Once we've saved these options, we direct you to the game page. This is the page
 The player_name variable is included in a <%= %> tag. This is an embedded ruby (.erb) tag that tells the framework to evaluate the contents as normal ruby. So in this case it places the value of `@player_name` into the view.
 With this our feature test should pass, and we have completed our first user story.
 
-Let's leave it here for now; that was a lot of new content! I will continue exploring this problem in my next post. In the meantime, try not getting too lost in the rabbit-hole of the internet. 
+Let's leave it here for now; that was a lot of new content! I will continue exploring this problem in my next post. In the meantime, try not getting too lost in the rabbit-hole of the internet.

@@ -1,6 +1,6 @@
 ---
 title: Grease II and other CRUD'y SeQueLs
-excerpt: "In this blog we explore some basic SQL."
+excerpt: "Databases, SQL and awful puns."
 teaser: data.png
 header:
   overlay_image: grease.jpg

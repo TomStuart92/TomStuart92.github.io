@@ -1,10 +1,10 @@
 ---
 title: Taking to the skies
-excerpt: "In this blog we develop a test driven solution to modelling an airport."
+excerpt: "Exploring a test driven solution to modelling an airport."
 teaser: plane.jpg
 header:
   overlay_image: plane.jpg
-  overlay_filter: 0.5 
+  overlay_filter: 0.5
 ---
 ## Introduction
 I had planned to explore a calculator program I wrote this week, but instead I want to focus on the first weekend challenge for Makers Academy.

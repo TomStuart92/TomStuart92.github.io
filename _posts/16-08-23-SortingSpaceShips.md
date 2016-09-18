@@ -1,6 +1,6 @@
 ---
 title: Sorting Spaceships
-excerpt: "In this blog post we explore the spaceship operator."
+excerpt: "Sorting custom objects with the spaceship operator."
 teaser: spaceship.jpg
 header:
   overlay_image: spaceship.jpg

@@ -1,6 +1,6 @@
 ---
 title: Cryptic Madness
-excerpt: "In this blog post we explore some basic cryptology."
+excerpt: "The Cryptopals Crypto Challenges and some basic cryptology."
 teaser: crypto.jpg
 header:
   overlay_image: crypto.jpg
