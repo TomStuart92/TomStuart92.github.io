@@ -8,7 +8,7 @@ header:
   teaser: bowling_mid.png
 sidebar:
   - title: "Technologies"
-    image: pp_home.png
+    image: bowling_mid.png
     image_alt: "logo"
     text: "Javascript, Jasmine, jQuery, HTML, CSS, Bootstrap-CSS"
   - title: "Background"
