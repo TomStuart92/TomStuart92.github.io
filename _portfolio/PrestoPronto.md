@@ -7,10 +7,10 @@ share: true
 header:
   teaser: pp_home.png
 sidebar:
-  - title: "Role"
+  - title: "Technologies"
     image: pp_home.png
     image_alt: "logo"
-    text: "Designer, Front-End and Back-End Developer"
+    text: "Sinatra, Capybara/RSpec, Bootstrap-CSS, CSS"
   - title: "Background"
     text: "Week Four Makers Academy Challenge"
 gallery:
@@ -37,4 +37,4 @@ On the backend, I spent time trying to improve the code to fall in line with bes
 
 {% include gallery caption="This is a sample gallery to go along with this case study." %}
 
-Moving forward I'd like to integrate picture uploads, most likely through use of AWS. If I find time, I would also implement a follow user system to more closely mimic twitters interface, allowing selective display of tweets based on who you are following. 
+Moving forward I'd like to integrate picture uploads, most likely through use of AWS. If I find time, I would also implement a follow user system to more closely mimic twitters interface, allowing selective display of tweets based on who you are following.

@@ -7,10 +7,10 @@ share: true
 header:
   teaser: rps_single.png
 sidebar:
-  - title: "Role"
+  - title: "Technologies"
     image: rps_single.png
     image_alt: "logo"
-    text: "Designer, Front-End and Back-End Developer"
+    text: "Sinatra, Capybara/RSpec, CSS"
   - title: "Background"
     text: "Week Three Makers Academy Challenge"
 gallery:
