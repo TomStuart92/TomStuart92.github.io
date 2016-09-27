@@ -1,9 +1,9 @@
 ---
 title: Back to the tenth grade
 excerpt: "It's time to build a testing framework"
-teaser: test.jpeg
+teaser: test.jpg
 header:
-  overlay_image: test.jpeg
+  overlay_image: test.jpg
   overlay_filter: 0.5
 ---
 
