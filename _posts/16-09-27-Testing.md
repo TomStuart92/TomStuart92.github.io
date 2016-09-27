@@ -70,6 +70,6 @@ function contains(container, target) {
 }
 ```
 
-These two matches represent the vast majority of the immediate functionality we'll need. Using this template we can add more as needed, but lets move on to the remainder of the framework.
+These two matchers represent the vast majority of the immediate functionality we'll need. Using this template we can add more as needed, but lets move on to the remainder of the framework.
 
 ## Before It Describe
