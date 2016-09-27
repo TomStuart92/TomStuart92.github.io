@@ -73,3 +73,56 @@ function contains(container, target) {
 These two matchers represent the vast majority of the immediate functionality we'll need. Using this template we can add more as needed, but lets move on to the remainder of the framework.
 
 ## Before It Describe
+
+Lets turn to some of the other elements of our testing framework. We need It and Describe blocks to give some structure and content to our code, but these will do little more than invoke the code block we give them:
+
+```javascript
+function describe(description, itBlock) {
+  console.log("DESCRIPTION: " + description);
+  itBlock();
+}
+
+function it(itDescription, test) {
+  console.log('   IT: ' + itDescription);
+  test();
+}
+```
+Before blocks are slightly more difficult. We want to invoke the before block before we run each it block.
+
+Lets allow the user to define a before block in there code and then just call it when we run the it block. We'll need to account for the chance the user has not defined a before block.
+
+```javascript
+function it(itDescription, test) {
+  console.log('   IT: ' + itDescription);
+  (beforeEach || Function)();
+  test();
+}
+```
+Here we use the || function to return either the beforeEach if defined, or otherwise the blank function object which will have no effect if called.
+
+With these pieces in place, we can write a suite of simple tests:
+
+```javascript
+describe("Note", function(){
+
+  beforeEach(function(){
+    note = new Note("Practice Note", "This is a practice note, it's not very interesting");
+    return "done!";
+  });
+
+  it("should have a title", function(){
+    expect(equal(note.title, "Practice Note"));
+  });
+
+  it("should have content", function() {
+    expect(equal(note.content, "This is a practice note, it's not very interesting"));
+  });
+
+  it("should preview first 20 characters", function() {
+    expect(equal(note.preview(), "This is a practice n"));
+  });
+
+});
+```
+
+We can build other elements on top of our framework as needed, but with these elements we can test most simple objects. We can also use Javascript's built in DOM-manipulation methods to allow us to feature test our websites!
