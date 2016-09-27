@@ -51,3 +51,25 @@ The reason we need to coerce at all is for arrays. In javascript, two arrays are
 console.log([1,2,3,4] === [1,2,3,4]) //false
 console.log([1,2,3,4].toString() === [1,2,3,4].toString()) //true
 ```
+Let's quickly add a contains matcher, to check if one object contains the other. We'll use the `indexOf` method, which returns -1 if the object does not contain the search string. `indexOf` is a nice method to use as it is defined for both strings and arrays. Remember these indexes start at 0:
+
+```javascript
+[1,2,3,4].indexOf(2) // 1
+'Hello Reader'.indexOf('l') //2
+```
+So our matcher becomes:
+
+```javascript
+function contains(container, target) {
+  if (container.indexOf(target) === -1) {
+    return('FAIL - '+ container + " doesn't include " + target);
+  }
+  else {
+    return('PASS - '+ container + " includes " + target);
+  }
+}
+```
+
+These two matches represent the vast majority of the immediate functionality we'll need. Using this template we can add more as needed, but lets move on to the remainder of the framework.
+
+## Before It Describe
