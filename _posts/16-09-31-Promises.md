@@ -67,4 +67,29 @@ function getURL(url) {
 }
 ```
 
-In this iteration the object that gets returned from our getURL method is a `Promise` object. 
+In this iteration the object that gets returned from our getURL method is a `Promise` object. The promise creation takes two arguments, resolve and reject, which broadly corresponds to success and failure. We wrap our asynchronous operation in this promise object and then we wrap the successful return object in a resolve block, and any errors in a reject block.
+
+The promise object has four possible states:
+
+- Fulfilled: The action relating to the promise succeeded
+- Rejected: The action relating to the promise failed
+- Pending: Hasn't fulfilled or rejected yet
+- Settled: Has fulfilled or rejected
+
+When the request is sent it is pending, and then when the response comes back it moves to be settled and either fulfilled or rejected.
+
+The true power of promises comes with the use of the `promise.then` method. This allows us to make method calls on the return value of our promise and have the program wait for the promise to be settled.
+
+For example if we wanted to parse the return value of our response into a JSON, we could do the following:
+
+```javascript
+getURL("http://www.targetAPI.com").then(function(response) {
+  JSON.parse(response);
+}, function(error) {
+  console.log(error)
+});
+```
+
+If the function passes with a fulfilled code, the first function gets called and we parse the response. If the AJAX call fails we log the error. The important point though is that the code in the `.then()` block does not get executed until the promise has been resolved.
+
+This is a really useful tool for dealing with asynchronous calls in JS, and very powerful. We can have multiple promises, chained `.then` blocks and other funky structures as needed to give exactly the behaviour we need. 
