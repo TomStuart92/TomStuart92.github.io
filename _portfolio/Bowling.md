@@ -27,7 +27,7 @@ Github Repository - [Link](https://github.com/TomStuart92/bowling-challenge)
 
 For the week five challenge we were tasked with writing a bowling scoring system in Javascript. This was the first challenge done entirely in JS. I used pure Javascript for the back end, Jasmine to test, and jQuery to build to bonus user interface.
 
-My approach to the problem relied heavily on duck typing and polymorphism. In the end this solution, while elegant placed to much responsibility on the frame classes which should have sat in the game class. However as an exercise in exploring OOD principles in Javascript, it was immensely useful.
+My approach to the problem relied heavily on duck typing and polymorphism. In the end this solution, while elegant, placed too much responsibility on the frame classes. This responsibility would have sat better in the game class. However as an exercise in exploring OOD principles in Javascript, it was immensely useful.
 
 {% include gallery caption="This is a sample gallery to go along with this case study." %}
 
