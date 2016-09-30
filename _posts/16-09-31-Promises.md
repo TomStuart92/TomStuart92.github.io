@@ -1,6 +1,6 @@
 ---
 title: I Promise To ...
-excerpt: "Give You What You Want, Maybe, Sometime In The Future"
+excerpt: "Give you what you want... maybe... actually probably not..."
 teaser: promise.jpg
 header:
   overlay_image: promise.jpg
