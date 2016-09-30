@@ -12,3 +12,5 @@ header:
 We've talked a couple of times about Javascript's asynchronicity, and today I want to write a little about one of the ways we can cope without resulting to callbacks. Really, I promise this will be really interesting.
 
 A Promise object is used for asynchronous computations and represents a value which may be available now, or in the future, or never. It allows you to define functions to be called on an asynchronous action's eventual completion.
+
+One of the archetypal asynchronous actions is a AJAX request. If you've forgot about these since the last time we talked about them, I wrote a short introduction [here](https://tomstuart92.github.io/Ajax/) which you may find useful. 
