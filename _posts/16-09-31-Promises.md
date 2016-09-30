@@ -87,11 +87,11 @@ getURL("http://www.targetAPI.com").then(function(response) {
   JSON.parse(response);
 }, function(error) {
   console.log(error)
-});
+});  
 ```
 
 If the function passes with a fulfilled code, the first function gets called and we parse the response. If the AJAX call fails we log the error. The important point though is that the code in the `.then()` block does not get executed until the promise has been resolved.
 
 This is a really useful tool for dealing with asynchronous calls in JS, and very powerful. We can have multiple promises, chained `.then` blocks and other funky structures as needed to give exactly the behaviour we need.
 
-If you want to learn more, I highly recommend this article on [html5rocks](http://www.html5rocks.com/en/tutorials/es6/promises/). 
+If you want to learn more, I highly recommend this article on [html5rocks](http://www.html5rocks.com/en/tutorials/es6/promises/).
