@@ -96,19 +96,79 @@ end
 
 ## Probing the classes
 
-Right, we've got our class objects. Our next step is to find out what methods and attributes they hold. We can use a few core ruby methods to do this. When we find the public methods and private methods, we compare the method list to those defined on the `Object` class. As our classes will all inherit from `Object`, this will leave us with only those methods defined on our class. 
+Right, we've got our class objects. Our next step is to find out what methods and attributes they hold. We can use a few core ruby methods to do this.
 
+When we find the public methods and private methods, we compare the method list to those defined on the `Object` class. As our classes will all inherit from `Object`, this will leave us with only those methods defined on our class.
 
 ```ruby
 def find_attributes(object)
-    object.instance_variables
-  end
+  object.instance_variables
+end
 
-  def find_public_methods(object)
-    object.public_methods - Object.new.public_methods
-  end
+def find_public_methods(object)
+  object.public_methods - Object.new.public_methods
+end
 
-  def find_private_methods(object)
-    object.private_methods - Object.new.private_methods
-  end
+def find_private_methods(object)
+  object.private_methods - Object.new.private_methods
+end
+```
+
+If we write a little script to display this information in a nice format, we can now pass in our Boris Bikes script and get something like the following:
+
+```
+========================================================
+CLASSES:
+--------------------------------------------------------
+DockingStation
+  - Attributes:
+    * @bikes
+    * @capacity
+
+  - Public Methods:
+    * add_bike
+
+  - Private Methods:
+
+--------------------------------------------------------
+Bike
+  - Attributes:
+    * @working
+
+  - Public Methods:
+    * working?
+    * report_broken
+    * fix_bike
+
+  - Private Methods:
+    * switch_state
+
+--------------------------------------------------------
+```
+
+This gives us the information to display the nodes on our domain model. However the real strength of these maps is that display the relationships between nodes. To do this we need to delve deep into ruby.
+
+## Set_Trace_Func - Recording Ruby Method Calls
+
+Our approach for looking at class dependencies is to iterate through all our classes, calling each method in turn. We then record all the methods that are executed due to to this method call.
+
+In this record we look for method calls where the object involved is different from the object we originally called the method on.
+
+To record all method calls we use the Set_Trace_Func. This oft overlooked method takes a proc as an argument and allows us to record everything that ruby does.
+
+Lets set it up to add a record to an array every time its invoked. For every public_method in a node we turn on the recorder, then call the method on the nodes class. We then turn off the recorder.
+
+```ruby
+node.public_methods.each do |method|
+  set_trace_func proc { |event, file, line, id, binding, classname|
+    @vertices << [node.classname, method, event, file, line, id, classname]
+  }
+    node.classname.method
+  set_trace_func(nil)
+end
+```
+
+Even a really simple program returns a huge number of ruby processes. Here's a sample from running our Boris Bikes program.
+
+```[[DockingStation, :add_bike, "c-return", "DOM_Modeller.rb", 78, :set_trace_func, Kernel], [DockingStation, :add_bike, "line", "DOM_Modeller.rb", 81, :find_vertices, NodeMapper], [DockingStation, :add_bike, "call", "DOM_Modeller.rb", 21, :send, MethodSender], [DockingStation, :add_bike, "line", "DOM_Modeller.rb", 22, :send, MethodSender], [DockingStation, :add_bike, "c-call", "DOM_Modeller.rb", 22, :instance_method, Module], [DockingStation, :add_bike, "c-return", "DOM_Modeller.rb", 22, :instance_method, Module], [DockingStation, :add_bike, "c-call", "DOM_Modeller.rb", 22, :arity, UnboundMethod], [DockingStation, :add_bike, "c-return", "DOM_Modeller.rb", 22, :arity, UnboundMethod], [DockingStation, :add_bike, "line", "DOM_Modeller.rb", 23, :send, MethodSender], [DockingStation, :add_bike, "c-call", "DOM_Modeller.rb", 23, :new, Class], [DockingStation, :add_bike, "c-call", "DOM_Modeller.rb", 23, :initialize, Array], [DockingStation, :add_bike, "c-return", "DOM_Modeller.rb", 23, :initialize, Array], [DockingStation, :add_bike, "c-return", "DOM_Modeller.rb", 23, :new, Class], [DockingStation, :add_bike, "line", "DOM_Modeller.rb", 24, :send, MethodSender], [DockingStation, :add_bike, "c-call", "DOM_Modeller.rb", 24, :new, Class], [DockingStation, :add_bike, "call", "/Users/Tom/Programming/MakersAcademy/WeekNine/DOMTest/TestFiles/TestFile.rb", 3, :initialize, DockingStation], [DockingStation, :add_bike, "line", "/Users/Tom/Programming/MakersAcademy/WeekNine/DOMTest/TestFiles/TestFile.rb", 4, :initialize, DockingStation], [DockingStation, :add_bike, "line", "/Users/Tom/Programming/MakersAcademy/WeekNine/DOMTest/TestFiles/TestFile.rb", 5, :initialize, DockingStation], [DockingStation, :add_bike, "return", "/Users/Tom/Programming/MakersAcademy/WeekNine/DOMTest/TestFiles/TestFile.rb", 6, :initialize, DockingStation], [DockingStation, :add_bike, "c-return", "DOM_Modeller.rb", 24, :new, Class], [DockingStation, :add_bike, "line", "DOM_Modeller.rb", 25, :send, MethodSender], [DockingStation, :add_bike, "c-call", "DOM_Modeller.rb", 25, :instance_method, Module]
 ```
