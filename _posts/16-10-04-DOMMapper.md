@@ -93,3 +93,22 @@ file.close
   Object.const_get("#{className}")
 end
 ```
+
+## Probing the classes
+
+Right, we've got our class objects. Our next step is to find out what methods and attributes they hold. We can use a few core ruby methods to do this. When we find the public methods and private methods, we compare the method list to those defined on the `Object` class. As our classes will all inherit from `Object`, this will leave us with only those methods defined on our class. 
+
+
+```ruby
+def find_attributes(object)
+    object.instance_variables
+  end
+
+  def find_public_methods(object)
+    object.public_methods - Object.new.public_methods
+  end
+
+  def find_private_methods(object)
+    object.private_methods - Object.new.private_methods
+  end
+```
