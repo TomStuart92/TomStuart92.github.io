@@ -20,3 +20,9 @@ This blog post will look at the code for that prototype. It's important to remem
 Regular readers will remember that on a few occasions, I have shown you domain models of code I was working on. If you think back to the [airport challenge post]({{ site.url }}/Airports), we had a domain model that looked a little like this:
 
 ![My helpful screenshot]({{ site.url }}/images/airport_domain.jpeg)
+
+My idea for a useful Dev Tool was to write a ruby gem that analyses your code and automatically generates a domain model for your classes. Pretty Good Idea Right?
+
+# Implementation
+
+Before we look at the code, let me remind you that this is an awful implementation. The only reason I'm writing this blog post is to show some of the interesting code snippets that grew from this project, and to highlight that it's ok to spike code to understand a problem better. However, that code should never reach production; ideally it should be deleted and test driven from the ground up.  
