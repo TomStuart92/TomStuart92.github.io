@@ -73,3 +73,22 @@ class Bike
   end
 end
 ```
+## Finding the Classes
+
+Our first challenge is to read in the file, and find the classes in it. We'll use a command line argument to get the name of the file we want to analyse, which we can access by using `ARGV[0]`.
+
+To start we require the file we're analysing. This loads the classes we want to analyse into memory. We then open the file as a text file, and scan it for any class definitions. This gives us an array of string holding the name of the classes in the file.
+
+Then for each string we look up the actual class object in the ruby memory. These are stored as constants in the `Object` object. This gives us an array of all the classes we want to analyse.
+
+```ruby
+require(ARGV[0])
+
+file = File.open(ARGV[0])
+  @classes = file.read.scan(/class (\w+)/).flatten
+file.close
+
+@objects = @classes.map do |className|
+  Object.const_get("#{className}")
+end
+```
