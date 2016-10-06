@@ -9,7 +9,7 @@ header:
 
 # Introduction
 
-Next week at Makers we have our first project week. This is an opportunity to build something we choose, in a stack of our own choosing. The theme for the week is Dev Tools, that is, any tool that makes our lives as developers easier.
+Next week at Makers we have our first project week. This is an opportunity to build something we choose, in a stack of our own choosing. The theme for the week is Dev Tools, any tool that makes our lives as developers easier.
 
 I had an idea for such a tool, but being me, I wanted to prove it was feasible before offering it up. So I played around with some code, and a few hours later had a working prototype.
 
@@ -26,3 +26,50 @@ My idea for a useful Dev Tool was to write a ruby gem that analyses your code an
 # Implementation
 
 Before we look at the code, let me remind you that this is an awful implementation. The only reason I'm writing this blog post is to show some of the interesting code snippets that grew from this project, and to highlight that it's ok to spike code to understand a problem better. However, that code should never reach production; ideally it should be deleted and test driven from the ground up.  
+
+Ok proviso's noted. Let's look at some code. I've created a barebones model of the boris bikes system to test our system on. It just has two classes, docking stations and bikes:
+
+```ruby
+class DockingStation
+
+  def initialize(capacity)
+    @bikes = []
+    @capacity = capacity
+  end
+
+  def add_bike
+    bike = Bike.new
+    if bike.working?
+      @bikes << bike
+    else
+      raise 'Bike Broken'
+    end
+  end
+
+end
+
+
+class Bike
+  def initialize
+    @working = true
+  end
+
+  def working?
+    @working
+  end
+
+  def report_broken
+    switch_state
+  end
+
+  def fix_bike
+    switch_state
+  end
+
+  private
+
+  def switch_state
+    @working = !@working
+  end
+end
+```
