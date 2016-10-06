@@ -73,6 +73,7 @@ class Bike
   end
 end
 ```
+
 ## Finding the Classes
 
 Our first challenge is to read in the file, and find the classes in it. We'll use a command line argument to get the name of the file we want to analyse, which we can access by using `ARGV[0]`.
