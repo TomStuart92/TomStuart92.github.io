@@ -1,9 +1,9 @@
 ---
 title: Mapping Interactions
 excerpt: "Building a Ruby Domain Mapper"
-teaser: promise.jpg
+teaser: map.jpg
 header:
-  overlay_image: promise.jpg
+  overlay_image: map.jpg
   overlay_filter: 0.5
 ---
 
