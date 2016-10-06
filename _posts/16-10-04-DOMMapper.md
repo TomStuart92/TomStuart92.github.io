@@ -190,4 +190,75 @@ From this we want to find elements where the calling and called class are differ
 [DockingStation, :add_bike, "call", "/Users/Tom/Programming/MakersAcademy/WeekNine/DOMTest/TestFiles/TestFile.rb", 25, :working?, Bike]
 ```
 
-These two records represent the DockingStation class creating a new bike class, and calling `.working?` on it. These represent links between our classes. 
+These two records represent the DockingStation class creating a new bike class, and calling `.working?` on it. These represent links between our classes. We now have all the information we need to draw our domain model.
+
+Actually drawing the model using a GUI is a little beyond the scope for this spike, and perhaps something we'll look at next week. For now we'll just format and print the information to the terminal.
+
+Let's turn our little project on our airport model which inspired this program. After combining the files we get the information we're after:
+
+```
+========================================================
+CLASSES:
+--------------------------------------------------------
+Airport
+  - Attributes:
+    * @capacity
+    * @weather
+    * @landed_planes
+
+  - Public Methods:
+    * land
+    * takeoff
+
+  - Private Methods:
+    * capacity
+    * weather
+    * landed_planes
+    * pre_landing_checks
+    * pre_takeoff_checks
+    * add_plane_to_airport
+    * remove_plane_from_airport
+    * at_airport?
+    * plane_landed?
+    * weather_safe?
+    * airport_full?
+
+--------------------------------------------------------
+Plane
+  - Attributes:
+    * @landed
+
+  - Public Methods:
+    * landed
+    * landed?
+    * land
+    * takeoff
+
+  - Private Methods:
+
+--------------------------------------------------------
+Weather
+  - Attributes:
+
+  - Public Methods:
+    * check_safe?
+
+  - Private Methods:
+
+--------------------------------------------------------
+DEPENDENCIES:
+--------------------------------------------------------
+  - The method call Airport.land calls the method #check_safe? on the Weather class.
+
+  - The method call Airport.land calls the method #landed? on the Plane class.
+
+  - The method call Airport.land calls the method #land on the Plane class.
+
+  - The method call Airport.takeoff calls the method #check_safe? on the Weather class.
+
+  - The method call Airport.takeoff calls the method #landed? on the Plane class.
+
+  - The method call Airport.takeoff calls the method #takeoff on the Plane class.
+
+========================================================
+```
