@@ -156,7 +156,17 @@ In this record we look for method calls where the object involved is different f
 
 To record all method calls we use the Set_Trace_Func. This oft overlooked method takes a proc as an argument and allows us to record everything that ruby does.
 
-Lets set it up to add a record to an array every time its invoked. For every public_method in a node we turn on the recorder, then call the method on the nodes class. We then turn off the recorder.
+Lets set it up to add a record to an array every time its invoked. For every public_method in a node we turn on the recorder, then call the method on the nodes class. We then turn off the recorder. The record contains in order:
+
+- The class we call the method on: `node.classname`
+- The method we called on the object: `method`
+- The event that was recorded: `event`
+- The file the call came from: `file`
+- The line number of the call: `line`
+- The method that ruby executes: `id`
+- The class that the method ruby executes was called on: `classname`
+
+Note the first class isn't necessary the same as the second. Indeed these are the records we are looking for. This is where we run a method, and this invokes another method on a different object.
 
 ```ruby
 node.public_methods.each do |method|
@@ -172,3 +182,12 @@ Even a really simple program returns a huge number of ruby processes. Here's a s
 
 ```[[DockingStation, :add_bike, "c-return", "DOM_Modeller.rb", 78, :set_trace_func, Kernel], [DockingStation, :add_bike, "line", "DOM_Modeller.rb", 81, :find_vertices, NodeMapper], [DockingStation, :add_bike, "call", "DOM_Modeller.rb", 21, :send, MethodSender], [DockingStation, :add_bike, "line", "DOM_Modeller.rb", 22, :send, MethodSender], [DockingStation, :add_bike, "c-call", "DOM_Modeller.rb", 22, :instance_method, Module], [DockingStation, :add_bike, "c-return", "DOM_Modeller.rb", 22, :instance_method, Module], [DockingStation, :add_bike, "c-call", "DOM_Modeller.rb", 22, :arity, UnboundMethod], [DockingStation, :add_bike, "c-return", "DOM_Modeller.rb", 22, :arity, UnboundMethod], [DockingStation, :add_bike, "line", "DOM_Modeller.rb", 23, :send, MethodSender], [DockingStation, :add_bike, "c-call", "DOM_Modeller.rb", 23, :new, Class], [DockingStation, :add_bike, "c-call", "DOM_Modeller.rb", 23, :initialize, Array], [DockingStation, :add_bike, "c-return", "DOM_Modeller.rb", 23, :initialize, Array], [DockingStation, :add_bike, "c-return", "DOM_Modeller.rb", 23, :new, Class], [DockingStation, :add_bike, "line", "DOM_Modeller.rb", 24, :send, MethodSender], [DockingStation, :add_bike, "c-call", "DOM_Modeller.rb", 24, :new, Class], [DockingStation, :add_bike, "call", "/Users/Tom/Programming/MakersAcademy/WeekNine/DOMTest/TestFiles/TestFile.rb", 3, :initialize, DockingStation], [DockingStation, :add_bike, "line", "/Users/Tom/Programming/MakersAcademy/WeekNine/DOMTest/TestFiles/TestFile.rb", 4, :initialize, DockingStation], [DockingStation, :add_bike, "line", "/Users/Tom/Programming/MakersAcademy/WeekNine/DOMTest/TestFiles/TestFile.rb", 5, :initialize, DockingStation], [DockingStation, :add_bike, "return", "/Users/Tom/Programming/MakersAcademy/WeekNine/DOMTest/TestFiles/TestFile.rb", 6, :initialize, DockingStation], [DockingStation, :add_bike, "c-return", "DOM_Modeller.rb", 24, :new, Class], [DockingStation, :add_bike, "line", "DOM_Modeller.rb", 25, :send, MethodSender], [DockingStation, :add_bike, "c-call", "DOM_Modeller.rb", 25, :instance_method, Module]
 ```
+
+From this we want to find elements where the calling and called class are different. For example:
+
+```
+[DockingStation, :add_bike, "call", "/Users/Tom/Programming/MakersAcademy/WeekNine/DOMTest/TestFiles/TestFile.rb", 21, :initialize, Bike]
+[DockingStation, :add_bike, "call", "/Users/Tom/Programming/MakersAcademy/WeekNine/DOMTest/TestFiles/TestFile.rb", 25, :working?, Bike]
+```
+
+These two records represent the DockingStation class creating a new bike class, and calling `.working?` on it. These represent links between our classes. 
