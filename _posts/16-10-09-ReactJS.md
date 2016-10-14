@@ -56,6 +56,22 @@ When we want to render this component on the page we simply call it as a HTML ta
 
 Lets talk about data and state next. It's all very well having pretty elements on the page, but the real power of React lives in its ability to dynamically update the page when it receives updated data.
 
+Data in React is called state. We can assign state to any of our components and it will persist. I've found it a good idea to keep you state in a single component to make dynamic rendering much easier. Say we have an application component that is responsible for rendering our single page app. We add state to out components via its constructor. Let's add an order state which will hold the current items in our order:
+
+```javascript
+class App extends React.Component {
+  constructor(){
+    super();
+    this.state = {
+      order: {}
+    };
+  }
+}
+```
+
+
+
+
 ## Chapter Four - The Grand Finale
 
 ## Epilogue
