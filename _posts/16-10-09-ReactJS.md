@@ -1,5 +1,5 @@
 ---
-title: Happy Face/Sad Face - A Tale in React
+title: Happy Face/Sad Face - A Tale of React
 excerpt: "One mans story of building an application in React"
 teaser: reaction.jpg
 header:
