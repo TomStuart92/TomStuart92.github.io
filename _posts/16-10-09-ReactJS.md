@@ -52,12 +52,10 @@ In this example we're using JSX, which is a preprocessor step that allows us to 
 
 When we want to render this component on the page we simply call it as a HTML tag: `<NotFound/>` which will render out `<h3> Not Found </h3>` to our page.
 
-## Chapter Three
-### On Cloud Nine
+## Chapter Three - On Cloud Nine
 
-Lets talk about data and state next. It's all very well having pretty elements on the page, but the real power of React lives in its ability to dynamically update the page when it receives updated data. 
+Lets talk about data and state next. It's all very well having pretty elements on the page, but the real power of React lives in its ability to dynamically update the page when it receives updated data.
 
-## Chapter Four
-### The Grand Finale
+## Chapter Four - The Grand Finale
 
-## Conclusion
+## Epilogue
