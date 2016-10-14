@@ -69,6 +69,43 @@ class App extends React.Component {
 }
 ```
 
+However, given that our app runs entirely in the clients browser, we have no way to persist the order. We'll have to make use of an AJAX call to save our data. While we could use our own API, lets instead make use of Firebase. Firebase is a cloud database provided by Google. We can save our data straight from our front-end to the cloud.
+
+To link our state up to the cloud we use the Rebase package. First we create a base component which holds our connection details:
+
+```javascript
+import Rebase from 're-base';
+
+const base = Rebase.createClass({
+  apiKey: //Your Key,
+    authDomain: //Your Domain,
+    databaseURL: //Your Database URL,
+});
+
+export default base;
+```
+
+Then whenever we want to save we can just use `base.syncState`. In the snippet below we've used the `componentWillMount` event hook which is called just before the component is rendered.
+
+```javascript
+class App extends React.Component {
+  constructor(){
+    super();
+    this.state = {
+      order: {}
+    };
+  }
+
+  componentWillMount(){
+    this.ref = base.syncState(`${this.props.params.user_ID}/order`
+      ,{
+      context: this,
+      state: 'order'
+    });
+  }
+}
+```
+
 
 
 
