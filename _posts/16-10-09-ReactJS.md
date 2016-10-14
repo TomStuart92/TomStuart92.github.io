@@ -24,11 +24,9 @@ React is a library written in Javascript that allows you to easily create intera
 
 [Andrew Ray has a great introductory blog post on React if you want to understand more about it before diving into the code.](http://blog.andrewray.me/reactjs-for-stupid-people/)
 
-## Chapter One
-## Setting Up The Story
+## Chapter One - **Setting Up The Story**
 
-## Chapter Two
-### Meeting the Main Characters
+## Chapter Two - **Meeting the Main Characters**
 
 Alright, we're ready to begin. The corner stone of any React application is its components. Components are custom HTML blocks which we can add data to and render onto the domain page at a time of our choosing.
 
