@@ -24,15 +24,15 @@ React is a library written in Javascript that allows you to easily create intera
 
 [Andrew Ray has a great introductory blog post on React if you want to understand more about it before diving into the code.](http://blog.andrewray.me/reactjs-for-stupid-people/)
 
-## Chapter One - **Setting Up The Story**
+## Chapter One - Setting Up The Story
 
-## Chapter Two - **Meeting the Main Characters**
+## Chapter Two - Meeting the Main Characters
 
 Alright, we're ready to begin. The corner stone of any React application is its components. Components are custom HTML blocks which we can add data to and render onto the domain page at a time of our choosing.
 
 Lets look at a really simple component. A component that will just output a H3 header to let the user know something wasn't found.
 
-```Javascript
+```javascript
 import React from 'react';
 
 class NotFound extends React.Component {
@@ -50,10 +50,12 @@ Components are classes which extend the React.Component class. You can add as ma
 
 In this example we're using JSX, which is a preprocessor step that allows us to add XML syntax to JavaScript. For our purposes this means we can do inline HTML in our classes. While you can use React without JSX they work really nicely together.
 
-When we want to render this component on the page we simply call it as a HTML tag: `<NotFound/>`.
+When we want to render this component on the page we simply call it as a HTML tag: `<NotFound/>` which will render out `<h3> Not Found </h3>` to our page.
 
 ## Chapter Three
 ### On Cloud Nine
+
+Lets talk about data and state next. It's all very well having pretty elements on the page, but the real power of React lives in its ability to dynamically update the page when it receives updated data. 
 
 ## Chapter Four
 ### The Grand Finale
