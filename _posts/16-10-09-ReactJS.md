@@ -30,6 +30,30 @@ React is a library written in Javascript that allows you to easily create intera
 ## Chapter Two
 ### Meeting the Main Characters
 
+Alright, we're ready to begin. The corner stone of any React application is its components. Components are custom HTML blocks which we can add data to and render onto the domain page at a time of our choosing.
+
+Lets look at a really simple component. A component that will just output a H3 header to let the user know something wasn't found.
+
+```Javascript
+import React from 'react';
+
+class NotFound extends React.Component {
+  render(){
+    return(
+      <h3>Not Found</h3>
+    )
+  }
+}
+
+export default NotFound;
+```
+
+Components are classes which extend the React.Component class. You can add as many methods as you like to a component but every component needs to have at least one method; the `render` method. This is the method that tells React how to insert the component into the page.
+
+In this example we're using JSX, which is a preprocessor step that allows us to add XML syntax to JavaScript. For our purposes this means we can do inline HTML in our classes. While you can use React without JSX they work really nicely together.
+
+When we want to render this component on the page we simply call it as a HTML tag: `<NotFound/>`.
+
 ## Chapter Three
 ### On Cloud Nine
 
