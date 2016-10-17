@@ -9,7 +9,7 @@ header:
 
 ## Foreword
 
-**We're not taught how to write code at Makers Academy.** Sure we learn a whole load of syntax, paradigms, best practices and design patterns. But that's not really what we're here to learn. What we actually learn is how to learn. In the context of Makers, the real end goal is to be able to approach a language/topic/concept we've never seen before and quickly get comfortable applying it.
+**We're not taught how to write code at Makers Academy.** Sure we learn a whole load of syntax, paradigms, best practices and design patterns. But that's not really what we're here to learn. What we actually learn is how to learn. In the context of Makers, the end goal is to be able to approach a language/topic/concept we've never seen before and quickly get comfortable applying it.
 
 I've always been the jump in at the deep end kind of guy, so this weekend I decided to test my skills and look at React. To skip to the punchline:
 
@@ -25,6 +25,10 @@ React is a library written in Javascript that allows you to easily create intera
 [Andrew Ray has a great introductory blog post on React if you want to understand more about it before diving into the code.](http://blog.andrewray.me/reactjs-for-stupid-people/)
 
 ## Chapter One - Setting Up The Story
+
+Install - NPM
+React DevTools
+
 
 ## Chapter Two - Meeting the Main Characters
 
@@ -52,7 +56,11 @@ In this example we're using JSX, which is a preprocessor step that allows us to 
 
 When we want to render this component on the page we simply call it as a HTML tag: `<NotFound/>` which will render out `<h3> Not Found </h3>` to our page.
 
-## Chapter Three - On Cloud Nine
+Clearly this is a bit of a boring component, but the same logic applies as the complexity scales.
+
+## Chapter Three - 
+
+## Chapter Four - On Cloud Nine
 
 Lets talk about data and state next. It's all very well having pretty elements on the page, but the real power of React lives in its ability to dynamically update the page when it receives updated data.
 
@@ -109,6 +117,6 @@ class App extends React.Component {
 
 
 
-## Chapter Four - The Grand Finale
+## Chapter Five - The Grand Finale
 
 ## Epilogue
