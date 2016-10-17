@@ -58,7 +58,43 @@ When we want to render this component on the page we simply call it as a HTML ta
 
 Clearly this is a bit of a boring component, but the same logic applies as the complexity scales.
 
-## Chapter Three - 
+## Chapter Three - Mad Props
+
+Alright we can build some basic components. But if we think of a few examples of built in HTML elements, there's something we're missing:
+
+```HTML
+<a href="link"></a>
+<img src="source" alt="alternative text" />
+<form class="form_class" action="index.html" method="post"></form>
+```
+
+All these tags take in additional information supplied as arguments in the tag. In React we can give a similar thing to our own elements. We call any information passed down to an element it's props. Lets say we want to create a form element that takes arguments for its default values:
+
+```javascript
+import React from 'react';
+
+class AddItemForm extends React.Component {
+  render(){
+    return(
+      <form className="form-class">
+        <input type="text" value={this.props.desc}/>
+        <input type="text" value={this.props.price}/>
+        <button type="submit">Add Item</button>
+      </form>
+    )
+  }
+}
+
+export default AddItemForm;
+```
+
+We access the data passed down through `this.props...`. Then when we want to render the element we simply pass down the data as arguments to our element:
+
+```HTML
+<AddItemForm desc="A Beautiful Vase" price=100/>
+```
+
+It's not just data we can pass down though. As functions in JavaScript are objects we can pass them down as well. This is useful in the next chapter when we look into state.
 
 ## Chapter Four - On Cloud Nine
 
@@ -93,7 +129,7 @@ const base = Rebase.createClass({
 export default base;
 ```
 
-Then whenever we want to save we can just use `base.syncState`. In the snippet below we've used the `componentWillMount` event hook which is called just before the component is rendered.
+Then whenever we want to save we can just use `base.syncState`. In the snippet below we've used the `componentWillMount` event hook which is called just before the component is rendered. We give it an empty render function as every element needs one.
 
 ```javascript
 class App extends React.Component {
@@ -111,11 +147,98 @@ class App extends React.Component {
       state: 'order'
     });
   }
+
+  render(){
+    return ()
+  }
 }
 ```
 
+So we have state saved in our application that is synced up to a remote database. But what happens when we want a component to make changes to this state? Lets say we have a component with a button that adds an item to our order:
 
+```javascript
+import React from 'react';
 
+class AddItemToOrderForm extends React.Component {
+  render(){
+    return(
+      <li className="item">
+        <h2>{this.props.desc}</h2>
+        <h3>{this.props.price}</h3>
+        <button onClick=???</button>
+        </li>
+    )
+  }
+}
+
+export default AddItemToOrderForm;
+```
+We get our item price and description from the props passed in. But what do we add to the buttons onClick method. It needs to take the information from the form and pass it back up to the Application to be saved in the state.
+
+The answer lies in our ability to pass around functions as props. In our application component we will define the method that adds the data into state, and then pass it down to the rendered form:
+
+```javascript
+class App extends React.Component {
+  constructor(){
+    super();
+    this.addToOrder = this.addToOrder.bind(this);
+    this.state = {
+      order: {}
+    };
+  }
+
+  // componentWillMount(){
+  //   this.ref = base.syncState(`${this.props.params.user_ID}/order`
+  //     ,{
+  //     context: this,
+  //     state: 'order'
+  //   });
+  // }
+
+  addToOrder(item){
+    const order = {...this.state.order};
+    const timestamp = Date.now();
+    order[`item-${timestamp}`] = item;
+    this.setState({order})
+  }
+
+  render() {
+    return (
+      <AddItemToOrderForm addToOrder={this.addToOrder} />
+    )
+  }
+}
+```
+
+This is quite involved lets so lets look at each step in turn:
+
+1- We create a function that adds a given item to the order state. Because this all takes place in the clients browser, we need to be careful about preserving state correctly. It's therefore considered good practice to take a copy of the current state which is what we do with `{...this.state.order}`. Once we have our copy, we add in a timestamped copy of the new item and then set the state equal to our new state object.
+
+2- Because of the implementation of React (meaning for reasons I haven't fully comprehended!); if you define custom methods within a component they are not bound to the component by default. Instead we need to use the `bind` method, which we do in the constructor.
+
+3- We then pass the method we defined down to the AddItemToOrderForm component, so we can access it in the props.
+
+We are now in a position to complete our component:
+
+```javascript
+import React from 'react';
+
+class AddItemToOrderForm extends React.Component {
+  render(){
+    return(
+      <li className="item">
+        <h2>{this.props.desc}</h2>
+        <h3>{this.props.price}</h3>
+        <button onClick={()=>this.props.addToOrder(this.props.desc)}</button>
+        </li>
+    )
+  }
+}
+
+export default AddItemToOrderForm;
+```
+
+We can access the method we defined on the app component here, and we pass it the items description to be added to the state object! This pattern of defining functions, and then passing them down via props is really common based on what I've seen in React so far.
 
 ## Chapter Five - The Grand Finale
 
