@@ -26,13 +26,13 @@ React is a library written in Javascript that allows you to easily create intera
 
 ## Chapter One - Setting Up The Story
 
-Install - NPM
+There are some excellent guides out there for setting up a new React project. [I'd recommend this article on code mentor](https://www.codementor.io/reactjs/tutorial/beginner-guide-setup-reactjs-environment-npm-babel-6-webpack), but there are many more out there. You'll need NPM installed, but otherwise a lot of the rest are optional extras. Things like JSX (used for having inline HTML in Javascript functions) aren't strictly needed but will make your life much easier. 
 
 While we're talking setup, let me quickly mention React DevTools. This is an add-on for chrome that adds another tab to the chrome DevTools. For those that are unaware, right-clicking on the page in chrome gives you an option to inspect the page. This brings up a console with lots of options for interacting with the underlying HTML/CSS/JS.
 
 Installing the React DevTools adds another tab which lets you interact with the React that is rendering the page. It also displays components state and props which we'll explore later on.
 
-[You can install them here:](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en). Once you have them, I'd recommend heading over to a Facebook/Instagram and having a play around before we begin. 
+[You can install them here:](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en). Once you have them, I'd recommend heading over to a Facebook/Instagram and having a play around before we begin.
 
 
 ## Chapter Two - Meeting the Main Characters
