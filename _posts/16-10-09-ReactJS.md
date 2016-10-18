@@ -1,5 +1,5 @@
 ---
-title: Happy Face/Sad Face - A Tale of React
+title: OverReactions - A Tale of React
 excerpt: "One mans story of building an application in React"
 teaser: reaction.jpg
 header:
@@ -26,7 +26,7 @@ React is a library written in Javascript that allows you to easily create intera
 
 ## Chapter One - Setting Up The Story
 
-There are some excellent guides out there for setting up a new React project. [I'd recommend this article on code mentor](https://www.codementor.io/reactjs/tutorial/beginner-guide-setup-reactjs-environment-npm-babel-6-webpack), but there are many more out there. You'll need NPM installed, but otherwise a lot of the rest are optional extras. Things like JSX (used for having inline HTML in Javascript functions) aren't strictly needed but will make your life much easier. 
+There are some excellent guides out there for setting up a new React project. [I'd recommend this article on code mentor](https://www.codementor.io/reactjs/tutorial/beginner-guide-setup-reactjs-environment-npm-babel-6-webpack), but there are many more out there. You'll need NPM installed, but otherwise a lot of the rest are optional extras. Things like JSX (used for having inline HTML in Javascript functions) aren't strictly needed but will make your life much easier.
 
 While we're talking setup, let me quickly mention React DevTools. This is an add-on for chrome that adds another tab to the chrome DevTools. For those that are unaware, right-clicking on the page in chrome gives you an option to inspect the page. This brings up a console with lots of options for interacting with the underlying HTML/CSS/JS.
 
@@ -245,6 +245,14 @@ export default AddItemToOrderForm;
 
 We can access the method we defined on the app component here, and we pass it the items description to be added to the state object! This pattern of defining functions, and then passing them down via props is really common based on what I've seen in React so far.
 
-## Chapter Five - The Grand Finale
-
 ## Epilogue
+
+We now have everything we need to build a simple one page React App. A great example of such an app is the subject of Wes Bos, React for Beginner tutorial. [It's hosted  here](http://catchoftheday.wesbos.com/).
+
+It's a great exercise for anyone interested to install the React DevTools and go have a play around. There is nothing more complicated that the features we looked at above, but when brought together it makes for a clean user interface.
+
+Notice how the page doesn't refresh between requests. React has a built in router that allows the app to handle browser redirects on the client machine. This allows for true single page applications.
+
+I've loved what I've seen of React so far. Sure it has it's idiosyncrasies like any programming language, and no doubt frustrations as you delve deeper in. But the system of building of components makes sense, and the power of having a single source of truth for all the data in your app can't be overstated.
+
+I'm looking forward to diving deeper into this powerful framework and seeing just what I can use it for!
