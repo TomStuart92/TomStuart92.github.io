@@ -247,7 +247,7 @@ We can access the method we defined on the app component here, and we pass it th
 
 ## Epilogue
 
-We now have everything we need to build a simple one page React App. A great example of such an app is the subject of Wes Bos, React for Beginner tutorial. [It's hosted  here](http://catchoftheday.wesbos.com/).
+We now have everything we need to build a simple one page React App. A great example of such an app is the subject of Wes Bos, React for Beginner tutorial. [It's hosted  here](http://catchoftheday.wesbos.com/store/helpless-grumpy-phenomena).
 
 It's a great exercise for anyone interested to install the React DevTools and go have a play around. There is nothing more complicated that the features we looked at above, but when brought together it makes for a clean user interface.
 
