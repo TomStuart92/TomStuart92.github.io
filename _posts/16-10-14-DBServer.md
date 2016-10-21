@@ -23,12 +23,12 @@ During your [mock] interview, you will pair on saving the data to a file.
 ```
 
 We can instantly pull a few things out of this:
-- We're going to need a server, with at least two routes (/set and /get).
-- The presence of query strings on these routes tell us they need to accept GET requests.
-- We'll need some way to persist the given params in local memory.
-- Our system needs to be easily extendable to add a database.
+- We're going to need a server, with at least two routes (/set and /get).   
+- The presence of query strings on these routes tell us they need to accept GET requests.   
+- We'll need some way to persist the given params in local memory.   
+- Our system needs to be easily extendable to add a database.   
 
-## Step One - Choosing Tech and setup
+## Step One - Choosing Tech and Setup
 
 This challenge screams lightweight implementation. We don't need the associated baggage of a framework like Rails. All we want is a slimmed down server, and some associated logic.
 
@@ -52,6 +52,42 @@ http.createServer(function (req, res) {
 This server just displays Hello World on any path. Hardly very useful!
 
 ## Step Two - Saving Keys
+
+Alright, let's get building. We're going to first build a route that allows us to save a key into local memory. To begin lets write a feature test for our new route.
+
+We're using Jasmine, which regular readers will be familiar with. Usually for feature testing we'd use a headless browser so that we can click on buttons and links on our page.
+
+However for this, we're simply making http requests to a server. Therefore, we'll use the request package which gives us the ability to make requests from our tests.
+
+We import our sever package so that we can run a test version of our server. Before each test we create a new instance of it, and then close if after the test.
+
+Our feature test makes a request to http://localhost:5000/set?name=tom, and asserts we get the correct response code and body.
+
+```javascript
+var server = require('../../index.js');
+var request = require('request');
+var url = "http://localhost:5000";
+
+describe("saving_key_to_object", function() {
+
+  beforeEach(function(){
+    server.listen(5000);
+  });
+
+  afterEach(function(){
+    server.close();
+  });
+
+  it("should successfully return params data on /set path", function(next) {
+    request(url + '/set?name=tom', function(error, response, body){
+      expect(response.statusCode).toEqual(201);
+      expect(body).toEqual('{"name":"tom"}');
+      next();
+    })
+  });
+```
+
+Next we
 
 ## Step Three - Retrieving Keys
 
