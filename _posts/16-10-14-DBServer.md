@@ -85,10 +85,198 @@ describe("saving_key_to_object", function() {
       next();
     })
   });
+});
 ```
 
-Next we
+Next we need somewhere to save the data. We could keep the data in our controller, but as always we want to seperate our business logic from other areas of concern. To achieve this we'll create a lib file, and make a module to save our data.
+
+As always, this means we'll need another set of tests. These ones are written in straight Jasmine as we're testing server side functionality. We'll check our storage is empty by default and then takes a query string and saves it to the state.
+
+The `addToState` function itself takes a callback which is why we're making our assertions inside the method call. The function(error, success) pattern is very common in JS and we'll make use of it to check the data is saved properly.
+
+```javascript
+var DataStorage = require("../lib/data_storage.js")
+
+describe("Data Storage Module", function() {
+
+  beforeEach(function(){
+    dataStorage = new DataStorage();
+  });
+
+  it("is initialized with an empty state", function() {
+    expect(dataStorage._state).toEqual({});
+  });
+
+  it("can add items to state", function(next) {
+    dataStorage.addToState("name=tom", function(err, success){
+      expect(success).toEqual('{"name":"tom"}');
+      next();
+    });
+  });
+});
+```
+
+Now both feature and unit tests are in place, we can actually start writing code. Our `addToState` function will take in the query string, so we'll need to parse it into an object. We then combine this object into out state object, and return the result via the callback.
+
+```javascript
+function DataStorage (){
+  this._state = {}
+}
+
+DataStorage.prototype =  {
+  addToState: function(string, callback) {
+    var obj = this._parseURI(string)
+    Object.assign(this._state, obj);
+    callback(null, JSON.stringify(obj))
+  },
+
+  _parseURI: function(str){
+    var stringMatch = (str || "").match(/(\w+)=(\w+)/);
+    var results = {}
+    results[stringMatch[1]] = stringMatch[2]
+    return results;
+  }
+};
+
+module.exports = DataStorage;
+```
+
+This initial iteration doesn't deal with bad inputs, but lets put that on the back burner for another time. With the storage module written, we can then hook it up to our controller.
+
+```javascript
+var http = require('http');
+var url = require('url');
+var DataStorage = require('./lib/data_storage.js')
+var dataStorage = new DataStorage
+
+this.server = http.createServer(function (req, res) {
+  var parsedURL = url.parse(req.url);
+
+  var send_set_response = function(err, success){
+      res.writeHead(201, {'Content-Type': 'JSON'});
+      res.end(success);
+  };
+
+  if (parsedURL.pathname == "/set" && req.method == 'GET') {
+    dataStorage.addToState(parsedURL.query, send_set_response)
+  }
+  else {
+    res.writeHead(404, {'Content-Type': 'text/css'});
+    res.end("Resource Not Found");
+  }
+});
+
+exports.listen = function () {
+  this.server.listen.apply(this.server, arguments);
+};
+
+exports.close = function (callback) {
+  this.server.close(callback);
+};
+```
+
+We've made a few small changes from the previous version of the controller. For one we've exported the listen and close functions which is what allowed us to use these functions in our feature test.
+
+We're also using the url package to extract the query string from the url. Then we check if the path is /set and then tell our dataStorage to `addToState`, providing it with a callback.
+
+At this point our tests should pass. We can add an item into our local memory.
 
 ## Step Three - Retrieving Keys
 
-## Design Thoughts
+Alright, onto the next one. We want to be able to retrieve keys on a /get request. Again lets work from the outside in; Feature Test then Unit Test:
+
+```javascript
+// Feature Test:
+describe("retrieving_key_from_object", function() {
+
+  beforeEach(function(next){
+    server.listen(5000);
+    request(url + '/set?name=tom', function(err, res, body){next()});
+  });
+
+  afterEach(function(){
+    server.close();
+  });
+
+  it("should successfully return params data on /set path", function(next) {
+    request(url + '/get?key=name', function(error, response, body){
+      expect(response.statusCode).toEqual(200);
+      expect(body).toEqual('{"requested_value":"tom"}');
+      next();
+    });
+  });
+});
+
+// Unit Test:
+describe("Data Storage Module", function() {
+  it("can retrieve items from state", function(next) {
+    dataStorage.addToState("name=tom", function(err, success){})
+    dataStorage.retrieveValue("key=name", function(err, success){
+      expect(success).toEqual('{"requested_value":"tom"}');
+      next();
+    })
+  });
+});
+```
+
+Because our design is flexible and the inherit symmetry of the problem, we simply have to add the method to our lib file, then make the needed changes to our controller to add the route.
+
+```javascript
+DataStorage.prototype =  {
+  // addToState: function(string, callback) {
+  //   var obj = this._parseURI(string)
+  //   Object.assign(this._state, obj);
+  //   callback(null, JSON.stringify(obj))
+  // },
+
+  retrieveValue: function(string, callback) {
+    var key = (this._parseURI(string) || {})['key']
+    callback(null, JSON.stringify({requested_value: this._state[key]}))
+  },
+
+  // _parseURI: function(str){
+  //   var stringMatch = (str || "").match(/(\w+)=(\w+)/);
+  //   var results = {}
+  //   results[stringMatch[1]] = stringMatch[2]
+  //   return results;
+  // }
+};
+```
+Again this doesn't check that the key exists, which is something we'd want to rectify moving forward, but for our MVP it'll do. As for the controller we just add a GET /get route:
+
+```javascript
+this.server = http.createServer(function (req, res) {
+  var parsedURL = url.parse(req.url);
+
+  var send_set_response = function(err, success){
+    res.writeHead(201, {'Content-Type': 'JSON'});
+    res.end(success);
+  };
+
+  var send_get_response = function (err, success) {
+    res.writeHead(200, {'Content-Type': 'text/css'});
+    res.end(success);
+  }
+
+  if (parsedURL.pathname == "/set" && req.method == 'GET') {
+    dataStorage.addToState(parsedURL.query, send_set_response)
+  }
+  else if (parsedURL.pathname == "/get" && req.method == 'GET') {
+    dataStorage.retrieveValue(parsedURL.query, send_get_response)
+  }
+  else {
+    res.writeHead(404, {'Content-Type': 'text/css'});
+    res.end("Resource Not Found");
+  }
+});
+```
+
+And with this our tests should pass again. This is the most basic implementation of this server, but it meets the requirements of the brief and can be easily extended. 
+
+## Final Thoughts
+
+Clearly we need to defend against edge cases. Feel free to check out my [repo](https://github.com/TomStuart92/TechTests), though it's a useful exercise in it's own right.
+
+In terms of design, our separation of business concerns has allowed us to easily add a database to our system. We'll simply need to change the way we add and retrieve from state in our lib folders. We won't have to change our controller whatsoever.
+
+Overall, the code is fairly clean though could benefit from a further refactor. The request package is really simple and made testing super easy so it's one I'd recommend if you don't need the full functionality of a headless browser.
