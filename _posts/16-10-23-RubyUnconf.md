@@ -4,7 +4,7 @@ excerpt: "Highlights of a day spent locked in a building full of ruby coders"
 teaser: unconf.png
 header:
   overlay_image: unconf.png
-  overlay_filter: 0.5
+  overlay_filter: 0.3
 ---
 
 ## So it's the Saturday morning after a big night...
