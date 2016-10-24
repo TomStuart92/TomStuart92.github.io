@@ -25,13 +25,101 @@ At this Ruby (Un)Conference we had sessions on everything from the philosophical
 
 ## Session One - Solving Problems using the Z3 library
 
+To kick of the day, I headed to a session on using the Z3 library in Ruby. The Z# library is a Microsoft library for solving problems whose solutions can be easily constrained. For example in sudoku we have a bunch of rules that constrain the possible solutions.\
 
+
+The convener of the session, wrote the package bindings in Ruby and was able to really show us the power of this package. We worked through a couple of examples, from (Sudoku)[https://github.com/taw/z3/blob/master/examples/sudoku] to a (RegExp crossword)[https://github.com/taw/z3/blob/master/examples/regexp_solver], the latter really testing the power of the library.
+
+The code itself is really interesting. The basic premise is to translate the problem into a mathematical problem for which we can describe a series of constraints. The library is then able to work its magic and return us a solution.
+
+For example, to solve a Sudoku puzzle:
+
+```ruby
+require "pathname"
+require_relative "../lib/z3"
+
+class SudokuSolver
+  def initialize(path)
+    data = Pathname(path).read
+    data = data.strip.split("\n").map do |line|
+      line.split.map{|c| c == "_" ? nil : c.to_i}
+    end
+    @data = data
+    @solver = Z3::Solver.new
+  end
+
+  def solve!
+    @cells = (0..8).map do |j|
+      (0..8).map do |i|
+        cell_var(@data[j][i], i, j)
+      end
+    end
+
+    @cells.each do |row|
+      @solver.assert Z3.Distinct(*row)
+    end
+    @cells.transpose.each do |column|
+      @solver.assert Z3.Distinct(*column)
+    end
+    @cells.each_slice(3) do |rows|
+      rows.transpose.each_slice(3) do |square|
+        @solver.assert Z3.Distinct(*square.flatten)
+      end
+    end
+
+    if @solver.satisfiable?
+      @model = @solver.model
+      print_answer!
+    else
+      puts "failed to solve"
+    end
+  end
+
+  private
+
+  def cell_var(cell, i, j)
+    v = Z3.Int("cell[#{i+1},#{j+1}]")
+    @solver.assert v >= 1
+    @solver.assert v <= 9
+    @solver.assert v == cell if cell != nil
+    v
+  end
+
+  def print_answer!
+    @cells.each do |row|
+      puts row.map{|v| @model[v]}.join(" ")
+    end
+  end
+end
+
+path = ARGV[0] || Pathname(__dir__) + "sudoku-1.txt"
+SudokuSolver.new(path).solve!
+```
+
+This code has multiple assertions that make up the rules of sudoku:
+
+- Each number must be > 1 and < 9.   
+- If a cell has a number in at the start, that number must remain the same.   
+- Each row and column must have the numbers 1-9 uniquely   
+- Each box of nine numbers must have the numbers 1-9 uniquely   
+
+Once we've set out these assertions we simply ask the package to find us a solution, which is dutifully does.
+
+An hour really isn't enough time to explore any package in sufficient depth, but from what I've seen, this library seems like a really nice way to solve a specific subset of problems. It's surprisingly nippy, even with complex problem spaces. The difficulty lies in problems where the constraints are difficult to describe or indeed unknown. Still a really interesting start to the day!
 
 ## Session Two - Machine Learning
 
+On to session two - Machine Learning, a topic whose name is thrown around so much at the moment it's almost lost meaning. I headed into this session with little more than a very basic understanding of what Machine Learning was.
+
+Over the course of the next hour I was witness to an interesting discussion that meandered its way across the sea of Machine Learning like a ship with no captain. While the content was inherently interesting the lack of leadership, meant that there was no clear focus for the discussion and so we ended up touching on a lot of topics that for a beginner was more overwhelming than
+
+Don't get me wrong, this was a really useful hour for finding some jumping off points to look into this deeper. But I think of all the talks, this one showed the pros and cons of the (Un)Conference format the clearest.
+
+For those with a grounding in a topic, the open forum style gives a real opportunity to really jump into a topic with like minded people. But for those with limited experience, the wealth and breath of opinions on an issue can be as confusing as it is enlightening.
+
 ## Session Three - Opal
 
-Ok, on to my favourite of the three sessions. Again Tomas led us through another slightly obscure ruby package, Opal. This one was slightly amazing. Opal is a set of gems that compiles your Ruby code into javascript. What this means for practical purposes is that it makes it possible to write a full stack application, both front and back end, in pure Ruby. Let that sink in for a minute.
+Ok, on to my favourite of the three sessions, an exploration through another slightly obscure ruby package, Opal. This one was slightly amazing. Opal is a set of gems that compiles your Ruby code into javascript. What this means for practical purposes is that it makes it possible to write a full stack application, both front and back end, in pure Ruby. Let that sink in for a minute.
 
 Now the is a very immature project. Don't start throwing away your javascript just yet. That being said though we saw examples of pure JS, jQuery and React front-end code written purely in Ruby.
 
