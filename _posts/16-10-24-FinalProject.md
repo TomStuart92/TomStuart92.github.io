@@ -32,7 +32,7 @@ This means that as well as building our IOS app, were also going to build our ow
 
 ![My helpful screenshot]({{ site.url }}/images/attendr_diagram.png)
 
-Today we were down to four people, so we divided up. Two of us started looking at the swift app. Ewan and I, turned our attention to the cloud server. We've settled on Node as our server side framework. We wanted something that we were familiar with, but also that could deal with a (hypothetical) large number of connections.
+Today we were down to four people, so we divided up. Two of us started looking at the swift app. Euan and I, turned our attention to the cloud server. We've settled on Node as our server side framework. We wanted something that we were familiar with, but also that could deal with a (hypothetical) large number of connections.
 
 Our first task was to get a list of events into a database to show to users. We've decided to use MeetUP's api to get events in London for our MVP. So we wrote a script that makes a request to their API and saves the response to a Postgres Database. We then deployed this to Heroku, and set up an automated task, so our events are refreshed on a regular basis.
 
@@ -44,4 +44,4 @@ I felt really tired/frustrated/unmotivated today until about 4pm. This morning I
 
 The rest of the day was spent in two teams, one trying to pull this data into swift, the other trying to implement Facebook logins. This was generally met by frustration. One of the issues we're coming up against is the recent release of Swift3. This means almost all the tutorials and documentation online is now out of date.
 
-Still at 4pm we had simultaneous breakthroughs as both teams achieved their goals. This was a great feeling and has really energised the team. Definitely been a trying day, but I think we're slowly getting the hang of Swift and I think tomorrow, we should be able to make some good progress. 
+Still at 4pm we had simultaneous breakthroughs as both teams achieved their goals. This was a great feeling and has really energised the team. Definitely been a trying day, but I think we're slowly getting the hang of Swift and I think tomorrow, we should be able to make some good progress.
