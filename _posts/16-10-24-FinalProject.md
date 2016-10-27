@@ -36,4 +36,12 @@ Today we were down to four people, so we divided up. Two of us started looking a
 
 Our first task was to get a list of events into a database to show to users. We've decided to use MeetUP's api to get events in London for our MVP. So we wrote a script that makes a request to their API and saves the response to a Postgres Database. We then deployed this to Heroku, and set up an automated task, so our events are refreshed on a regular basis.
 
-All in all a good day, but I feel like we haven't made as much progress as we should have. Swift/XCode appears to be a really difficult environment to work in, and the development cycle may prove to be much longer than we originally thought. 
+All in all a good day, but I feel like we haven't made as much progress as we should have. Swift/XCode appears to be a really difficult environment to work in, and the development cycle may prove to be much longer than we originally thought.
+
+### Wednesday 26th October
+
+I felt really tired/frustrated/unmotivated today until about 4pm. This morning I quickly built the route to serve up the events in the database. [It's here in case anyone is interested](http://www.attendr-server.herokuapp.com/events).
+
+The rest of the day was spent in two teams, one trying to pull this data into swift, the other trying to implement Facebook logins. This was generally met by frustration. One of the issues we're coming up against is the recent release of Swift3. This means almost all the tutorials and documentation online is now out of date.
+
+Still at 4pm we had simultaneous breakthroughs as both teams achieved their goals. This was a great feeling and has really energised the team. Definitely been a trying day, but I think we're slowly getting the hang of Swift and I think tomorrow, we should be able to make some good progress. 
