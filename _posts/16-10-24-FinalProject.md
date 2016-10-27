@@ -40,7 +40,7 @@ All in all a good day, but I feel like we haven't made as much progress as we sh
 
 ### Wednesday 26th October
 
-I felt really tired/frustrated/unmotivated today until about 4pm. This morning I quickly built the route to serve up the events in the database. [It's here in case anyone is interested](http://www.attendr-server.herokuapp.com/events).
+I felt really tired/frustrated/unmotivated today until about 4pm. This morning I quickly built the route to serve up the events in the database. [It's here in case anyone is interested](https://attendr-server.herokuapp.com/events).
 
 The rest of the day was spent in two teams, one trying to pull this data into swift, the other trying to implement Facebook logins. This was generally met by frustration. One of the issues we're coming up against is the recent release of Swift3. This means almost all the tutorials and documentation online is now out of date.
 
