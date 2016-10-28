@@ -45,3 +45,32 @@ I felt really tired/frustrated/unmotivated today until about 4pm. This morning I
 The rest of the day was spent in two teams, one trying to pull this data into swift, the other trying to implement Facebook logins. This was generally met by frustration. One of the issues we're coming up against is the recent release of Swift3. This means almost all the tutorials and documentation online is now out of date.
 
 Still at 4pm we had simultaneous breakthroughs as both teams achieved their goals. This was a great feeling and has really energised the team. Definitely been a trying day, but I think we're slowly getting the hang of Swift and I think tomorrow, we should be able to make some good progress.
+
+### Thursday 27th October
+
+My laptop is dying. It's taking progressively longer to run even the most simple tasks. And don't even think about trying to run a simulation in xCode. This presents a pretty challenging set of circumstances for developing an application in Swift.
+
+Luckily today I was able to focus on our back-end. Given this is written in Node, I can work on this in Atom without much difficulty.
+
+One of the most important things in any project is context. It's no different in programming. The context of this project is that we have two weeks to develop a working prototype. It certainly doesn't make sense spending months develop some beautiful controller logic, if your client needs a prototype by the end of the week.
+
+The implications of this guide where we focus the majority of our time. Its already clear the majority of the technical challenges lie in the IOS app, and so the back-end server is less important. Given that people don't remember your project for the quality of your code, but on the visual features, this will be were we will spend most our time.
+
+So today I worked alone, and smashed out the majority of the needed back-end functionality. It's certainly not the prettiest code but it's fully tested and working. For our MVP that's all it needs to do.
+
+Building the matching logic proved to be the hardest thing. The sequelize docs are pretty useless, so I ended up falling back on my Data Analytics Brain and writing the query in raw SQL.
+
+```javascript
+return models.sequelize.query(
+      'SELECT * FROM "Users" WHERE id in'+
+      '(SELECT "UserId" FROM "RSVPs" WHERE "UserId" <> '
+      +UserId
+      +' AND "EventId" in (SELECT "EventId" FROM "RSVPs" WHERE "UserId" = '
+      +UserId
+      +'))', { type: models.sequelize.QueryTypes.SELECT}
+    ).then(function(results){
+      return results})
+  }
+```
+
+Isn't that beautiful? It's certainly a code smell, but again, at the moment I more worried about having a working final project than a beautiful code base. The technical debt can be paid of later.  
