@@ -73,4 +73,24 @@ return models.sequelize.query(
   }
 ```
 
-Isn't that beautiful? It's certainly a code smell, but again, at the moment I more worried about having a working final project than a beautiful code base. The technical debt can be paid of later.  
+Isn't that beautiful? It's certainly a code smell, but again, at the moment I more worried about having a working final project than a beautiful code base. The technical debt can be paid of later.
+
+### Friday 28th October
+
+As a team, we continue to have regular little wins. This is a great feeling, and really makes it feel like your progressing towards your goal. Thao and I managed to connect our application up to our backend that I built yesterday. This was a great feeling and really validated our approach of building the two apart.
+
+Elsewhere we've got a working User creation system, and our messaging system is progressing nicely. I think we're in a really good place to smash out the rest of the features before the feature freeze on Wednesday. 
+
+### Saturday 29th October
+
+Yep, didn't do any coding today. Had an incredible truffle burger and great coffee though.
+
+### Sunday 30th October
+
+The advantage of remote work is that you can be curled up in front of a roaring fire, with Star Wars on the screen whilst you smash out a few outstanding issues.
+
+I tidied up the Facebook login today, pushing Users through to events on a successful login and checking if they're already logged in when they arrive on the login screen. I'm starting to get into a flow when writing Swift, but it's still a bit of a challenge. Most of this seems to stem from the static typing, something I think I might devote a blog post to next week. It's not intrinsically difficult, but requires a shift in mindset from dynamic languages.
+
+I also played around with some of the visual styling which is something that seems to play to xCode strengths. As it gives you an actual wireframe of each scene in the storyboard it becomes pretty easy to get things looking just as you want.
+
+I'm starting to feel we're on track to complete our project to a really decent level by Friday. Hopefully, I'm not mistaken.
