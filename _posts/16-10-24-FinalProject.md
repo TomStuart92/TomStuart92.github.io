@@ -79,7 +79,7 @@ Isn't that beautiful? It's certainly a code smell, but again, at the moment I mo
 
 As a team, we continue to have regular little wins. This is a great feeling, and really makes it feel like your progressing towards your goal. Thao and I managed to connect our application up to our backend that I built yesterday. This was a great feeling and really validated our approach of building the two apart.
 
-Elsewhere we've got a working User creation system, and our messaging system is progressing nicely. I think we're in a really good place to smash out the rest of the features before the feature freeze on Wednesday. 
+Elsewhere we've got a working User creation system, and our messaging system is progressing nicely. I think we're in a really good place to smash out the rest of the features before the feature freeze on Wednesday.
 
 ### Saturday 29th October
 
@@ -94,3 +94,13 @@ I tidied up the Facebook login today, pushing Users through to events on a succe
 I also played around with some of the visual styling which is something that seems to play to xCode strengths. As it gives you an actual wireframe of each scene in the storyboard it becomes pretty easy to get things looking just as you want.
 
 I'm starting to feel we're on track to complete our project to a really decent level by Friday. Hopefully, I'm not mistaken.
+
+### Monday 31st October
+
+So here we sit, at the end of all things. The last week of Makers Academy. There's a definite sense of impending doom across the cohort as the realisation of next weeks return to real life hits.
+
+But, there's still project work to be getting on with. Today started with a code review of the work we've done over the weekend. There were some impressive visual changes made, and we're getting really close to our MVP.
+
+The rest of the day was spent implementing matches and working on the chat functionality. The matches have been fully implemented now, complete with profile picture and the name of the event your both attending. The chat is proceeding a little slower, as we're using Firebase to power it. This is proving to be a configuration nightmare, but headway is being made.
+
+As I left we discovered we've got a merge issue on our storyboard which will be really difficult to resolve, as it's a visual tool, not lines of code. Fun for tomorrow!
