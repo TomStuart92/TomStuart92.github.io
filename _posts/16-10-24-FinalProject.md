@@ -104,3 +104,11 @@ But, there's still project work to be getting on with. Today started with a code
 The rest of the day was spent implementing matches and working on the chat functionality. The matches have been fully implemented now, complete with profile picture and the name of the event your both attending. The chat is proceeding a little slower, as we're using Firebase to power it. This is proving to be a configuration nightmare, but headway is being made.
 
 As I left we discovered we've got a merge issue on our storyboard which will be really difficult to resolve, as it's a visual tool, not lines of code. Fun for tomorrow!
+
+### Tuesday 1st November
+
+MVP, MVP! Well today we achieved the inevitable and got our project to it's MVP. MVP stands for Minimal Viable Product, and is the first time your project can be considered a viable entity. Today we got the chat messaging working and as such can call our app a fully functioning dating application!
+
+I was really impressed at just how easily we were able to integrate the chat functionality into the app. It's been another victory for building things separately and then merging them together. In this case we built the chat as a standalone application first, which we then brought in to our main app once it was working.  
+
+Elsewhere, we've mostly been making the small changes that are needed to really polish the app off. I quickly added Map functionality for viewing the location of an event, we added some animation, and worked on the styling. It's all coming together really nicely and should be really polished for Friday. 
