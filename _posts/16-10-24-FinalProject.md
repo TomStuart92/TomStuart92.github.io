@@ -111,4 +111,14 @@ MVP, MVP! Well today we achieved the inevitable and got our project to it's MVP.
 
 I was really impressed at just how easily we were able to integrate the chat functionality into the app. It's been another victory for building things separately and then merging them together. In this case we built the chat as a standalone application first, which we then brought in to our main app once it was working.  
 
-Elsewhere, we've mostly been making the small changes that are needed to really polish the app off. I quickly added Map functionality for viewing the location of an event, we added some animation, and worked on the styling. It's all coming together really nicely and should be really polished for Friday. 
+Elsewhere, we've mostly been making the small changes that are needed to really polish the app off. I quickly added Map functionality for viewing the location of an event, we added some animation, and worked on the styling. It's all coming together really nicely and should be really polished for Friday.
+
+### Wednesday 2nd November
+
+Now that we've reached the MVP stage, the remainder of the week will be spent ironing out the bugs, cleaning the code and polishing the visuals. It's a chance to pay back some of the technical debt we accrued earlier in the project. There will always be little dirty hacks you can use to move faster in building a system, but at the appropriate moment you should always go back and clean them up.
+
+The project itself is looking great and it's certainly something I'll be happy to show off in my portfolio. It's been a really interesting challenge technically and very representative of the kind of work we could be looking at in our junior developer jobs.
+
+We also had our final careers sessions today, which involved a really useful group conversation about the fears we have about finding jobs. Open dialogue like this is always an enlightening exercise; as it turns out everyone has pretty similar feelings. They ranged from the expected - "I'm not good enough", to the downright bizarre - "I'm worried I'll use up to many company perks". Still fears like these are always best out in the open where you can examine them properly.
+
+Personally, I'm not worried about finding a job per se, but do fret that choosing the wrong job will make a big impact on my career progression and long term sustainability of my development career. It's almost definitely unfounded, as I'm sure the first job has little bearing over a full 40 year career, but alas as usual our fears probably don't stand up to logical explanation. 
