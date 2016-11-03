@@ -11,9 +11,9 @@ It's built on top of a fork of the [Minimal Mistakes Jekyll Theme](https://mmist
 The following adaptions have been made to the original fork:
 
 - 2016-09-11: Integrate Facebook Comments and Google Analytics    
-- 2016-09-04: Add Portfolio Page    
-- 2016-09-01: Add Blog Index Page
-- 2016-08-29: Update Home Page from Blog Post to custom Splash    
+- 2016-09-04: Add Portfolio Page     
+- 2016-09-01: Add Blog Index Page   
+- 2016-08-29: Update Home Page from Blog Post to custom Splash       
 
 ## License
 
