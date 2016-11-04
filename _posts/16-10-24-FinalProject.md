@@ -121,4 +121,14 @@ The project itself is looking great and it's certainly something I'll be happy t
 
 We also had our final careers sessions today, which involved a really useful group conversation about the fears we have about finding jobs. Open dialogue like this is always an enlightening exercise; as it turns out everyone has pretty similar feelings. They ranged from the expected - "I'm not good enough", to the downright bizarre - "I'm worried I'll use up to many company perks". Still fears like these are always best out in the open where you can examine them properly.
 
-Personally, I'm not worried about finding a job per se, but do fret that choosing the wrong job will make a big impact on my career progression and long term sustainability of my development career. It's almost definitely unfounded, as I'm sure the first job has little bearing over a full 40 year career, but alas as usual our fears probably don't stand up to logical explanation. 
+Personally, I'm not worried about finding a job per se, but do fret that choosing the wrong job will make a big impact on my career progression and long term sustainability of my development career. It's almost definitely unfounded, as I'm sure the first job has little bearing over a full 40 year career, but alas as usual our fears probably don't stand up to logical explanation.
+
+### Thursday 3rd November
+
+The end is nigh, or something like that. My penultimate day at Makers Academy passed with little aplomb. Our last issues were closed, pull requests merged and commits made this morning. Officially, Attendr V1 is complete. I'm really happy with just how polished a product we were able to create in two weeks using entirely self-taught technologies.
+
+We spent the rest of the day putting together our presentation for graduation tomorrow evening. This involved recording a screencast of our app in use, which thanks to some creative back-end work, turned out to be suitably hilarious.
+
+I'm going to speak around the tech side of the project tomorrow which should be fine. It's a really interesting approach and the breadth of our project should really show through.
+
+Apart from a delicious Team Lunch, their is little else to speak on. I'm a good combination of happy, excited, sad, scared, and thankful as I head into my last day tomorrow. This has been one of the greatest experiences of my life, and I want to make sure it has a fitting conclusion.
