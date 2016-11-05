@@ -6,7 +6,7 @@ header:
   overlay_image: swift.jpg
   overlay_filter: 0.5
 ---
-## Week Eleven
+## Final Projects are Here!
 
 Week Eleven has finally arrived, and that means it's time for final projects. For the next two weeks we'll be working on a group project which will test everything we've learnt over the last ten weeks.
 
@@ -132,3 +132,17 @@ We spent the rest of the day putting together our presentation for graduation to
 I'm going to speak around the tech side of the project tomorrow which should be fine. It's a really interesting approach and the breadth of our project should really show through.
 
 Apart from a delicious Team Lunch, their is little else to speak on. I'm a good combination of happy, excited, sad, scared, and thankful as I head into my last day tomorrow. This has been one of the greatest experiences of my life, and I want to make sure it has a fitting conclusion.
+
+### Friday 4th November
+
+Return of the Jedi, Return of the King, The Deathly Hallows; all epic sagas must come to an end. So it is with out Makers Academy journeys. Today bore many tears, hugs and smiles. A day of tumultuous emotion as we reach the end of our time on this incredible course.
+
+It was incredibly sad to say goodbye to the group of people I've spent the last 16 weeks with. The bond thats formed through mutual hardship is pretty incredible, and it's been an absolute pleasure getting to know each and every member of the Makers Academy family.
+
+As for the day itself, we had our a careers fare this morning which was a great opportunity to speak to some real developers who are looking to hire junior developers. It was interesting to pick their brains about exactly what they're looking for.
+
+The rest of the day was spent hanging out and putting the finishing touches to our presentation. [You can view our final video demo here](https://youtu.be/a6o0Nbv4VA8) At 5.30 the presentations started, and everyone absolutely killed it. All the presentations were excellent, and a fitting end to the course. Then a few beers and slices of pizza to end an emotionally exhausting day.
+
+Words can't really express how I feel right now. It's almost an empty deflated feeling as I again have no structure in my life. For three months, Makers has provided me a bubble in which I could totally devote myself to coding. Now it's just me against the world. But, I feel totally prepared for what's to come.
+
+So what next? There's still so much to learn, and of course the hunt for a job begins tomorrow. I also want to focus on picking up some of the more computer science side of things so I'll start looking at that as well. Otherwise, it's more coding, testing, and getting very annoyed at xCode.
