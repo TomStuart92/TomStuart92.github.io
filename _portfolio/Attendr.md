@@ -1,6 +1,6 @@
 ---
 title: "Attendr"
-excerpt: "A events driven IOS dating app developed in Swift with a Node backend."
+excerpt: "An events driven IOS dating app developed in Swift with a Node backend."
 layout: single
 author_profile: false
 share: true

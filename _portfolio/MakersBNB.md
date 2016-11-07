@@ -16,8 +16,8 @@ sidebar:
 gallery:
   - url: bnb_home.png
     image_path: bnb_home.png
-  - url: bnb_spaces.png
-    image_path: bnb_spaces.png
+  - url: bnb_space.png
+    image_path: bnb_space.png
   - url: bnb_add.png
     image_path: bnb_add.png
   - url: bnb_add_space.png
