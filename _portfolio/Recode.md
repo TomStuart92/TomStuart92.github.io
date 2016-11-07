@@ -31,7 +31,7 @@ gallery:
 Project is hosted on Heroku - [Link](https://recode-app.herokuapp.com/)*        
 Github Repository - [Link](https://github.com/TomStuart92/recode)
 
-* If you're testing the Heroku Project I suggest using my github username 'TomStuart92' and using the 'RecodeTest' repository which has a nice example file in, complete with a whole load of code smells.  
+\* If you're testing the Heroku Project I suggest using my github username 'TomStuart92' and using the 'RecodeTest' repository which has a nice example file in, complete with a whole load of code smells.  
 
 As part of the Makers Academy course we were tasked with creating development tool. My team settled on building a tool to help developers refactor there code.
 
