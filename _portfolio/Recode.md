@@ -10,7 +10,7 @@ sidebar:
   - title: "Technologies"
     image: recode_home.png
     image_alt: "logo"
-    text: "Sinatra, Capybara/RSpec, Bootstrap-CSS, CSS"
+    text: "Sinatra, Capybara/RSpec, Material Design Lite"
   - title: "Background"
     text: "Week Four Makers Academy Challenge"
 gallery:
