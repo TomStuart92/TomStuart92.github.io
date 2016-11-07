@@ -28,13 +28,13 @@ gallery:
     image_path: attendr_chat.png
 ---
 
-Backend is hosted on Heroku - [Link](https://www.attendr-server.herokuapp.com)       
-iOS App Demo - [Link](https://www.youtube.com/watch?v=a6o0Nbv4VA8)
+Backend is hosted on Heroku - [Link](http://www.attendr-server.herokuapp.com)       
+iOS App Demo - [Link](http://www.youtube.com/watch?v=a6o0Nbv4VA8)
 
-Backend Github Repository - [Link](https://github.com/TomStuart92/attendr-server)   
-Frontend Github Repository - [Link](https://github.com/TomStuart92/attendr)
+Backend Github Repository - [Link](http://github.com/TomStuart92/attendr-server)   
+Frontend Github Repository - [Link](http://github.com/TomStuart92/attendr)
 
-For our final project we developed an events driven dating application in Swift. You can read my development diary for the project [here](https://tomstuart92.github.io/FinalProject/).
+For our final project we developed an events driven dating application in Swift. You can read my development diary for the project [here](http://tomstuart92.github.io/FinalProject/).
 
 In two weeks we built a commercially viable MVP, in a totally new language and paradigm (Swift) as well as building the backend infrastructure needed to support it.
 
@@ -52,4 +52,4 @@ The Frontend of the application was built in Swift, and is solely responsible fo
 
 {% include gallery caption="Gallery" %}
 
-Overall, the project was a really useful challenge to gauge how much we have learnt in the last twelve weeks. At the end of the day, I feel the quality of the work is pretty impressive given that we had two weeks to build the whole system in a environment and language we'd never used before. TDD in xCode remains a massive headache and it's something I'd want to face into head on the next time I take on a challenge like this. The quality of the code is also fairly low, and is in need of a good cleanup refactor, which is high on my list of things to do. 
+Overall, the project was a really useful challenge to gauge how much we have learnt in the last twelve weeks. At the end of the day, I feel the quality of the work is pretty impressive given that we had two weeks to build the whole system in a environment and language we'd never used before. TDD in xCode remains a massive headache and it's something I'd want to face into head on the next time I take on a challenge like this. The quality of the code is also fairly low, and is in need of a good cleanup refactor, which is high on my list of things to do.
