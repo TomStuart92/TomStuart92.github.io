@@ -31,7 +31,7 @@ Github Repository - [Link](https://github.com/TomStuart92/chitter-challenge)
 
 As part of the Makers Academy course we were tasked with creating a twitter clone. This solution makes use of the Sinatra framework for a streamlined deployment process, and relies on Capybara/RSpec for testing. Visual styling was improved using Sinatra-Bootstrap CSS and user authentication was achieved using the BCrypt Gem.
 
-Stylistically, I was happy with the look achieved, given this was my first use of bootstrap-css. The implementation of the home page was especially good.
+Stylistically, I was happy with the look achieved, given this was my first use of Bootstrap-CSS. The implementation of the home page was especially good.
 
 On the backend, I spent time trying to improve the code to fall in line with best practices. The controllers and models are particularly skinny. I'm also pleased with the test coverage with helped me with to refactor quickly.
 
