@@ -7,7 +7,7 @@ header:
   overlay_filter: 0.5
 ---
 
-This blog has been re-posted on the [Makers Academy Blog](https://blog.makersacademy.com/overreact-ions-a-tale-of-react-71d06e2479d1)/
+This blog has been re-posted on the [Makers Academy Blog](https://blog.makersacademy.com/overreact-ions-a-tale-of-react-71d06e2479d1)
 
 ## Foreword
 
