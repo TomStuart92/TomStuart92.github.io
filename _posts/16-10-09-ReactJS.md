@@ -7,6 +7,8 @@ header:
   overlay_filter: 0.5
 ---
 
+This blog has been re-posted on the [Makers Academy Blog](https://blog.makersacademy.com/overreact-ions-a-tale-of-react-71d06e2479d1)/
+
 ## Foreword
 
 **We're not taught how to write code at Makers Academy.** Sure we learn a whole load of syntax, paradigms, best practices and design patterns. But that's not really what we're here to learn. What we actually learn is how to learn. In the context of Makers, the end goal is to be able to approach a language/topic/concept we've never seen before and quickly get comfortable applying it.
