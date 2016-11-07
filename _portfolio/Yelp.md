@@ -1,5 +1,5 @@
 ---
-title: "PrestoPronto"
+title: "Yelp"
 excerpt: "A Yelp clone built in the Rails framework."
 layout: single
 author_profile: false

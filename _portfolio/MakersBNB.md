@@ -5,23 +5,25 @@ layout: single
 author_profile: false
 share: true
 header:
-  teaser: pp_home.png
+  teaser: bnb_home.png
 sidebar:
   - title: "Technologies"
-    image: pp_home.png
+    image: bnb_home.png
     image_alt: "logo"
-    text: "Sinatra, Capybara/RSpec, Bootstrap-CSS, CSS"
+    text: "NodeJS, PostgreSQL, Knex/Bookmark"
   - title: "Background"
-    text: "Week Four Makers Academy Challenge"
+    text: "Week Six Makers Academy Challenge"
 gallery:
-  - url: pp_home.png
-    image_path: pp_home.png
-  - url: pp_sign_up.png
-    image_path: pp_sign_up.png
-  - url: pp_peeps.png
-    image_path: pp_peeps.png
-  - url: pp_make_peep.png
-    image_path: pp_make_peep.png
-  - url: pp_comment.png
-    image_path: pp_comment.png
+  - url: bnb_home.png
+    image_path: bnb_home.png
+  - url: bnb_spaces.png
+    image_path: bnb_spaces.png
+  - url: bnb_add.png
+    image_path: bnb_add.png
+  - url: bnb_add_space.png
+    image_path: bnb_add_space.png
+  - url: bnb_request.png
+    image_path: bnb_request.png
 ---
+
+Github Repository - [Link](https://github.com/TomStuart92/makers_bnb)
