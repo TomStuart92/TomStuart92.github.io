@@ -5,36 +5,28 @@ layout: single
 author_profile: false
 share: true
 header:
-  teaser: pp_home.png
+  teaser: pinged_inbox.png
 sidebar:
   - title: "Technologies"
-    image: pp_home.png
+    image: pinged_inbox.png
     image_alt: "logo"
-    text: "Sinatra, Capybara/RSpec, Bootstrap-CSS, CSS"
+    text: "React, Firebase, Material Design Lite"
   - title: "Background"
-    text: "Week Four Makers Academy Challenge"
+    text: "A personal project to build a React application"
 gallery:
-  - url: pp_home.png
-    image_path: pp_home.png
-  - url: pp_sign_up.png
-    image_path: pp_sign_up.png
-  - url: pp_peeps.png
-    image_path: pp_peeps.png
-  - url: pp_make_peep.png
-    image_path: pp_make_peep.png
-  - url: pp_comment.png
-    image_path: pp_comment.png
+  - url: pinged_inbox.png
+    image_path: pinged_inbox.png
+  - url: pinged_sent.png
+    image_path: pinged_sent.png
+  - url: pinged_create.png
+    image_path: pinged_create.png
 ---
 
-Project is hosted on Heroku - [Link](https://PrestoPronto.herokuapp.com/)        
-Github Repository - [Link](https://github.com/TomStuart92/chitter-challenge)
+Project is hosted on Heroku - [Link](http://gentle-stream-18629.herokuapp.com)        
+Github Repository - [Link](http://github.com/TomStuart92/email_react_app)
 
-As part of the Makers Academy course we were tasked with creating a twitter clone. This solution makes use of the Sinatra framework for a streamlined deployment process, and relies on Capybara/RSpec for testing. Visual styling was improved using Sinatra-Bootstrap CSS and user authentication was achieved using the BCrypt Gem.
+Having worked through Wes Bos' React for Beginners tutorial (An Example of the finished product is [here](http://catchoftheday.wesbos.com/store/helpless-grumpy-phenomena)), I was inspired to create something on my own. I decided to try to rebuild a single page email application, named Pinged.
 
-Stylistically, I was happy with the look achieved, given this was my first use of bootstrap-css. The implementation of the home page was especially good.
+Based on Google Inbox and using MDL styling, this inbox dynamically pulls data in from Firebase, and saves outbound emails the same way. I'm really happy with how it turned out, and while there is still a lot of work to do to get it to the quality I'd like, it helped to reinforce all that I've learned about React so far.
 
-On the backend, I spent time trying to improve the code to fall in line with best practices. The controllers and models are particularly skinny. I'm also pleased with the test coverage with helped me with to refactor quickly.
-
-{% include gallery caption="This is a sample gallery to go along with this case study." %}
-
-Moving forward I'd like to integrate picture uploads, most likely through use of AWS. If I find time, I would also implement a follow user system to more closely mimic twitters interface, allowing selective display of tweets based on who you are following.
+I've written about the technical aspects of this project [here](https://tomstuart92.github.io/ReactJS/).
