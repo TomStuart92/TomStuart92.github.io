@@ -13,10 +13,11 @@ sidebar:
     text: "Swift, xCode, Firebase, NodeJS, PostgreSQL"
   - title: "Background"
     text: "Makers Academy final project built over two weeks."
-  - github: "http://github.com/TomStuart92/attendr-server"
-    github_link: "Backend Github Repository"
-  - github: "http://github.com/TomStuart92/attendr"
-    github_link: "Frontend Github Repository"
+  - github:
+    - github_link: "http://github.com/TomStuart92/attendr-server"
+      github_name: "Backend Repository"
+    - github_link: "http://github.com/TomStuart92/attendr"
+      github_name: "Frontend Repository"
 gallery:
   - url: attendr_loading.png
     image_path: attendr_loading.png

@@ -17,7 +17,12 @@
       {% if s.title %}<h3>{{ s.title }}</h3>{% endif %}
       {% if s.text %}{{ s.text | markdownify }}{% endif %}
       {% if s.github %}
-        <li><a href="https://github.com/{{ s.github }}"><i class="fa fa-fw fa-github" aria-hidden="true"></i> {{s.github_link}}</a></li>
+        <h3>Github Links</h3>
+        {% for l in s.github %}
+          <ul>
+            <li><a href="{{ l.github_link }}"><i class="fa fa-fw fa-github" aria-hidden="true"></i> {{l.github_name}}</a></li>
+          </ul>
+        {% endfor %}
       {% endif %}
     {% endfor %}
     {% if page.sidebar.nav %}
