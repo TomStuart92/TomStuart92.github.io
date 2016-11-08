@@ -34,7 +34,7 @@ gallery:
   - url: recode_code.png
     image_path: recode_code.png
 ---
-**If you're testing the Heroku Project I suggest using my github username 'TomStuart92' and using the 'RecodeTest' repository which has a nice example file in, complete with a whole load of code smells.**
+\* If you're testing the Heroku Project I suggest using my github username 'TomStuart92' and using the 'RecodeTest' repository which has a nice example file complete with a whole load of code smells.
 
 {% include gallery caption="Recode Gallery." %}
 

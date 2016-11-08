@@ -31,9 +31,9 @@ gallery:
 
 {% include gallery caption="Makers BnB Gallery." %}
 
-This project aimed to reproduce AirBNB using Javascript on the front and backends. This was our first exposure to Node, and we decided to forgo using Express for an added challenge.
+I've written about the technical side of this project [here](http://TomStuart92.github.io/Node)
 
-I wrote about the technical side of this project [here](http://TomStuart92.github.io/Node)
+This project aimed to reproduce AirBNB using Javascript on the front and backends. This was our first exposure to Node, and we decided to forgo using Express for an added challenge.
 
 The slower development cycle of working in a new language and environment, means this project didn't quite get finished to the standard I'd like. There are still features that need to be implemented, and the visual finish could use some polish.
 
