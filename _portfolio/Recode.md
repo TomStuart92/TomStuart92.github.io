@@ -7,6 +7,8 @@ share: true
 header:
   teaser: recode_home.png
 sidebar:
+- image: recode_home.png
+  image_alt: "logo"
 - github:
   - github_link: "https://github.com/TomStuart92/recode"
     github_name: "Github Repository"
@@ -15,8 +17,6 @@ sidebar:
     example_name: "Heroku Deployed"
     example_class: "fa fa-fw fa-xing"
   - title: "Technologies"
-    image: recode_home.png
-    image_alt: "logo"
     text: "Sinatra, Capybara/RSpec, Material Design Lite"
   - title: "Background"
     text: "Week Four Makers Academy Challenge"
