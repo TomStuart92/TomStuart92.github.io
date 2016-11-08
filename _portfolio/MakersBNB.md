@@ -7,12 +7,12 @@ share: true
 header:
   teaser: bnb_home.png
 sidebar:
+  - image: bnb_home.png
+    image_alt: "logo"
   - github:
     - github_link: "https://github.com/TomStuart92/makers_bnb"
       github_name: "Github Repository"
   - title: "Technologies"
-    image: bnb_home.png
-    image_alt: "logo"
     text: "NodeJS, PostgreSQL, Knex/Bookmark"
   - title: "Background"
     text: "Week Six Makers Academy Challenge"

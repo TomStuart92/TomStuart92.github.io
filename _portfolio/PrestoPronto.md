@@ -7,6 +7,8 @@ share: true
 header:
   teaser: pp_home.png
 sidebar:
+  - image: pp_home.png
+    image_alt: "logo"
   - github:
     - github_link: "https://github.com/TomStuart92/chitter-challenge"
       github_name: "Github Repository"
@@ -15,8 +17,6 @@ sidebar:
       example_name: "Heroku Deployed"
       example_class: "fa fa-fw fa-xing"
   - title: "Technologies"
-    image: pp_home.png
-    image_alt: "logo"
     text: "Sinatra, Capybara/RSpec, Bootstrap-CSS, CSS"
   - title: "Background"
     text: "Week Four Makers Academy Challenge"

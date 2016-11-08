@@ -7,6 +7,8 @@ share: true
 header:
   teaser: rps_single.png
 sidebar:
+  - image: rps_single.png
+    image_alt: "logo"
   - github:
     - github_link: "https://github.com/TomStuart92/rps-challenge"
       github_name: "Github Repository"
@@ -15,8 +17,6 @@ sidebar:
       example_name: "Heroku Deployed"
       example_class: "fa fa-fw fa-xing"
   - title: "Technologies"
-    image: rps_single.png
-    image_alt: "logo"
     text: "Sinatra, Capybara/RSpec, CSS"
   - title: "Background"
     text: "Week Three Makers Academy Challenge"

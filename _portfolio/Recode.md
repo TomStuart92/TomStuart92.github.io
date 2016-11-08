@@ -7,19 +7,19 @@ share: true
 header:
   teaser: recode_home.png
 sidebar:
-- image: recode_home.png
-  image_alt: "logo"
-- github:
-  - github_link: "https://github.com/TomStuart92/recode"
-    github_name: "Github Repository"
-- examples:
-  - example_link: "https://recode-app.herokuapp.com/"
-    example_name: "Heroku Deployed"
-    example_class: "fa fa-fw fa-xing"
-  - title: "Technologies"
-    text: "Sinatra, Capybara/RSpec, Material Design Lite"
-  - title: "Background"
-    text: "Week Four Makers Academy Challenge"
+  - image: recode_home.png
+    image_alt: "logo"
+  - github:
+    - github_link: "https://github.com/TomStuart92/recode"
+      github_name: "Github Repository"
+  - examples:
+    - example_link: "https://recode-app.herokuapp.com/"
+      example_name: "Heroku Deployed"
+      example_class: "fa fa-fw fa-xing"
+    - title: "Technologies"
+      text: "Sinatra, Capybara/RSpec, Material Design Lite"
+    - title: "Background"
+      text: "Week Four Makers Academy Challenge"
 gallery:
   - url: recode_home.png
     image_path: recode_home.png

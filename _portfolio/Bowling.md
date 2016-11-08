@@ -7,6 +7,8 @@ share: true
 header:
   teaser: bowling_mid.png
 sidebar:
+  - image: bowling_mid.png
+    image_alt: "logo"
   - github:
     - github_link: "https://github.com/TomStuart92/bowling-challenge"
       github_name: "Github Repository"
@@ -15,8 +17,6 @@ sidebar:
       example_name: "Heroku Deployed"
       example_class: "fa fa-fw fa-xing"
   - title: "Technologies"
-    image: bowling_mid.png
-    image_alt: "logo"
     text: "Javascript, Jasmine, jQuery, HTML, CSS, Bootstrap-CSS"
   - title: "Background"
     text: "Week Four Makers Academy Challenge"

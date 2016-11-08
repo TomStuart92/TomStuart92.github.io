@@ -7,6 +7,8 @@ share: true
 header:
   teaser: attendr.png
 sidebar:
+  - image: attendr.png
+    image_alt: "logo"
   - github:
     - github_link: "http://github.com/TomStuart92/attendr-server"
       github_name: "Backend Repository"
@@ -20,8 +22,6 @@ sidebar:
       example_name: "Frontend Demo"
       example_class: "fa fa-fw fa-youtube"
   - title: "Technologies"
-    image: attendr.png
-    image_alt: "logo"
     text: "Swift, xCode, Firebase, NodeJS, PostgreSQL"
   - title: "Background"
     text: "Makers Academy final project built over two weeks."

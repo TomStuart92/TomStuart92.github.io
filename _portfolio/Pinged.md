@@ -7,6 +7,8 @@ share: true
 header:
   teaser: pinged_inbox.png
 sidebar:
+  - image: pinged_inbox.png
+    image_alt: "logo"
   - github:
     - github_link: "http://github.com/TomStuart92/email_react_app"
       github_name: "Github Repository"
@@ -15,8 +17,6 @@ sidebar:
       example_name: "Heroku Deployed"
       example_class: "fa fa-fw fa-xing"
   - title: "Technologies"
-    image: pinged_inbox.png
-    image_alt: "logo"
     text: "React, Firebase, Material Design Lite"
   - title: "Background"
     text: "A personal project to build a React application"

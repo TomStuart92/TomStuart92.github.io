@@ -7,6 +7,8 @@ share: true
 header:
   teaser: yelp_home.png
 sidebar:
+  - image: yelp_home.png
+    image_alt: "logo"
   - github:
     - github_link: "https://github.com/TomStuart92/yelp"
       github_name: "Github Repository"
@@ -15,8 +17,6 @@ sidebar:
       example_name: "Heroku Deployed"
       example_class: "fa fa-fw fa-xing"
   - title: "Technologies"
-    image: yelp_home.png
-    image_alt: "logo"
     text: "Rails, Capybara/RSpec, Bootstrap-CSS, CSS"
   - title: "Background"
     text: "Week Seven Makers Academy Challenge"
@@ -41,4 +41,4 @@ In this weekly project we were tasked with creating a Yelp clone in Ruby on Rail
 
 For one weeks work in another new framework, I was pleased with the progress we made. The convention over configuration nature of Rails, made the project interesting, but for an application of this size, the bulk of Rails simply got in the way of an agile quick development cycle.
 
-This is a project I hope to return to in the future, as I feel that the advantages of Rails will only really become apparent after full emersion in the framework for a decent period of time, and on a project of sufficient size. 
+This is a project I hope to return to in the future, as I feel that the advantages of Rails will only really become apparent after full emersion in the framework for a decent period of time, and on a project of sufficient size.
