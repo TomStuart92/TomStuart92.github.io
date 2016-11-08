@@ -4,6 +4,7 @@
   <div class="sidebar sticky">
   {% if page.author_profile or layout.author_profile %}{% include author-profile.html %}{% endif %}
   {% if page.sidebar %}
+
     {% for s in page.sidebar %}
       {% if s.image %}
         <img src=
@@ -14,17 +15,25 @@
         {% endif %}
         alt="{% if s.image_alt %}{{ s.image_alt }}{% endif %}">
       {% endif %}
-      {% if s.title %}<h3>{{ s.title }}</h3>{% endif %}
-      {% if s.text %}{{ s.text | markdownify }}{% endif %}
+
       {% if s.github %}
         <h3>Github Links</h3>
         {% for l in s.github %}
-          <ul>
-            <li><a href="{{ l.github_link }}"><i class="fa fa-fw fa-github" aria-hidden="true"></i> {{l.github_name}}</a></li>
-          </ul>
+          <li><a href="{{ l.github_link }}"><i class="fa fa-fw fa-github" aria-hidden="true"></i> {{l.github_name}}</a></li>
         {% endfor %}
       {% endif %}
+
+      {% if s.examples %}
+        <h3>Example Links</h3>
+        {% for l in s.examples %}
+          <li><a href="{{ l.example_link }}"><i class="{{ l.example_class }}" aria-hidden="true"></i> {{l.example_name}}</a></li>
+        {% endfor %}
+      {% endif %}
+
+      {% if s.title %}<h3>{{ s.title }}</h3>{% endif %}
+      {% if s.text %}{{ s.text | markdownify }}{% endif %}
     {% endfor %}
+
     {% if page.sidebar.nav %}
       {% include nav_list nav=page.sidebar.nav %}
     {% endif %}

@@ -18,6 +18,13 @@ sidebar:
       github_name: "Backend Repository"
     - github_link: "http://github.com/TomStuart92/attendr"
       github_name: "Frontend Repository"
+  - examples:
+    - example_link: "http://www.attendr-server.herokuapp.com"
+      example_name: "Backend Demo"
+      example_class: "fa fa-fw"
+    - example_link: "http://www.youtube.com/watch?v=a6o0Nbv4VA8"
+      example_name: "Frontend Demo"
+      example_class: "fa fa-fw fa-youtube"
 gallery:
   - url: attendr_loading.png
     image_path: attendr_loading.png
@@ -32,9 +39,6 @@ gallery:
   - url: attendr_chat.png
     image_path: attendr_chat.png
 ---
-
-Backend is hosted on Heroku - [Link](http://www.attendr-server.herokuapp.com)       
-iOS App Demo - [Link](http://www.youtube.com/watch?v=a6o0Nbv4VA8)
 
 For our final project we developed an events driven dating application in Swift. You can read my development diary for the project [here](http://tomstuart92.github.io/FinalProject/).
 
