@@ -18,6 +18,6 @@ Over the next 12 weeks I will be learning a whole host of new languages, methodo
 
 So to answer the question, my only qualification is that I'm a beginner too! I hope that will lead to a gentler introduction to these topics, than reading an experts take would provide. I also enjoy making terrible puns, so if you're a fan of that, then feel free to stick around. Otherwise I hope you do find something of use here.
 
-08/11/2016 - **Update**: So I've done it! Last week I graduated from Makers Academy, and am now firmly on the path towards become a software engineer. I'm going to keep the blog going, not least as its an excellent learning tool for me. I'm now in JobHunt mode, so let me know if anyone has any interesting contacts they can line me up with! 
+**08/11/2016 - Update**: So I've done it! Last week I graduated from Makers Academy, and am now firmly on the path towards become a software engineer. I'm going to keep the blog going, not least as its an excellent learning tool for me. I'm now in JobHunt mode, so let me know if anyone has any interesting contacts they can line me up with! 
 
 Tom
