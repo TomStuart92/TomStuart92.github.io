@@ -7,6 +7,13 @@ share: true
 header:
   teaser: recode_home.png
 sidebar:
+- github:
+  - github_link: "https://github.com/TomStuart92/recode"
+    github_name: "Github Repository"
+- examples:
+  - example_link: "https://recode-app.herokuapp.com/"
+    example_name: "Heroku Deployed"
+    example_class: "fa fa-fw fa-xing"
   - title: "Technologies"
     image: recode_home.png
     image_alt: "logo"
@@ -27,15 +34,11 @@ gallery:
   - url: recode_code.png
     image_path: recode_code.png
 ---
+**If you're testing the Heroku Project I suggest using my github username 'TomStuart92' and using the 'RecodeTest' repository which has a nice example file in, complete with a whole load of code smells.**
 
-Project is hosted on Heroku - [Link](https://recode-app.herokuapp.com/)*        
-Github Repository - [Link](https://github.com/TomStuart92/recode)
-
-\* If you're testing the Heroku Project I suggest using my github username 'TomStuart92' and using the 'RecodeTest' repository which has a nice example file in, complete with a whole load of code smells.  
+{% include gallery caption="Recode Gallery." %}
 
 As part of the Makers Academy course we were tasked with creating development tool. My team settled on building a tool to help developers refactor there code.
-
-{% include gallery caption="This is a sample gallery to go along with this case study." %}
 
 It's integrated through the Github API, and allows you to run analysis for code smells and design anti-patterns on your project files. The current state of the project is very much at an MVP level, and is something I'd love to have a chance to look at further.
 

@@ -7,6 +7,13 @@ share: true
 header:
   teaser: pinged_inbox.png
 sidebar:
+  - github:
+    - github_link: "http://github.com/TomStuart92/email_react_app"
+      github_name: "Github Repository"
+  - examples:
+    - example_link: "http://gentle-stream-18629.herokuapp.com"
+      example_name: "Heroku Deployed"
+      example_class: "fa fa-fw fa-xing"
   - title: "Technologies"
     image: pinged_inbox.png
     image_alt: "logo"
@@ -21,13 +28,9 @@ gallery:
   - url: pinged_create.png
     image_path: pinged_create.png
 ---
-
-Project is hosted on Heroku - [Link](http://gentle-stream-18629.herokuapp.com)        
-Github Repository - [Link](http://github.com/TomStuart92/email_react_app)
+{% include gallery caption="Pinged Gallery." %}
 
 Having worked through Wes Bos' React for Beginners tutorial (An Example of the finished product is [here](http://catchoftheday.wesbos.com/store/helpless-grumpy-phenomena)), I was inspired to create something on my own. I decided to try to rebuild a single page email application, named Pinged.
-
-{% include gallery caption="This is a sample gallery to go along with this case study." %}
 
 Based on Google Inbox and using MDL styling, this inbox dynamically pulls data in from Firebase, and saves outbound emails the same way. I'm really happy with how it turned out, and while there is still a lot of work to do to get it to the quality I'd like, it helped to reinforce all that I've learned about React so far.
 

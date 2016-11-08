@@ -7,6 +7,9 @@ share: true
 header:
   teaser: bnb_home.png
 sidebar:
+  - github:
+    - github_link: "https://github.com/TomStuart92/makers_bnb"
+      github_name: "Github Repository"
   - title: "Technologies"
     image: bnb_home.png
     image_alt: "logo"
@@ -26,9 +29,7 @@ gallery:
     image_path: bnb_request.png
 ---
 
-Github Repository - [Link](https://github.com/TomStuart92/makers_bnb)
-
-{% include gallery caption="This is a sample gallery to go along with this case study." %}
+{% include gallery caption="Makers BnB Gallery." %}
 
 This project aimed to reproduce AirBNB using Javascript on the front and backends. This was our first exposure to Node, and we decided to forgo using Express for an added challenge.
 

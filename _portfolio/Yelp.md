@@ -7,6 +7,13 @@ share: true
 header:
   teaser: yelp_home.png
 sidebar:
+  - github:
+    - github_link: "https://github.com/TomStuart92/yelp"
+      github_name: "Github Repository"
+  - examples:
+    - example_link: "https://j-eats.herokuapp.com/"
+      example_name: "Heroku Deployed"
+      example_class: "fa fa-fw fa-xing"
   - title: "Technologies"
     image: yelp_home.png
     image_alt: "logo"
@@ -28,11 +35,10 @@ gallery:
     image_path: yelp_reviews.png
 ---
 
-Project is hosted on Heroku - [Link](https://j-eats.herokuapp.com/)        
-Github Repository - [Link](https://github.com/TomStuart92/yelp)
+{% include gallery caption="J-EATS Gallery." %}
 
 In this weekly project we were tasked with creating a Yelp clone in Ruby on Rails. Our project J-EATS, has all the core functionality of a restaurant review website.
 
-{% include gallery caption="This is a sample gallery to go along with this case study." %}
-
 For one weeks work in another new framework, I was pleased with the progress we made. The convention over configuration nature of Rails, made the project interesting, but for an application of this size, the bulk of Rails simply got in the way of an agile quick development cycle.
+
+This is a project I hope to return to in the future, as I feel that the advantages of Rails will only really become apparent after full emersion in the framework for a decent period of time, and on a project of sufficient size. 
