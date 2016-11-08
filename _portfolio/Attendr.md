@@ -13,6 +13,10 @@ sidebar:
     text: "Swift, xCode, Firebase, NodeJS, PostgreSQL"
   - title: "Background"
     text: "Makers Academy final project built over two weeks."
+  - github: "http://github.com/TomStuart92/attendr-server"
+    github_link: "Backend Github Repository"
+  - github: "http://github.com/TomStuart92/attendr"
+    github_link: "Frontend Github Repository"
 gallery:
   - url: attendr_loading.png
     image_path: attendr_loading.png
@@ -30,9 +34,6 @@ gallery:
 
 Backend is hosted on Heroku - [Link](http://www.attendr-server.herokuapp.com)       
 iOS App Demo - [Link](http://www.youtube.com/watch?v=a6o0Nbv4VA8)
-
-Backend Github Repository - [Link](http://github.com/TomStuart92/attendr-server)   
-Frontend Github Repository - [Link](http://github.com/TomStuart92/attendr)
 
 For our final project we developed an events driven dating application in Swift. You can read my development diary for the project [here](http://tomstuart92.github.io/FinalProject/).
 
