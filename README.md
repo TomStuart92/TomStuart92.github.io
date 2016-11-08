@@ -10,6 +10,7 @@ It's built on top of a fork of the [Minimal Mistakes Jekyll Theme](https://mmist
 
 The following adaptions have been made to the original fork:
 
+- 2016-11-08: Add Github and Example Links to Portfolio Pages    
 - 2016-09-11: Integrate Facebook Comments and Google Analytics    
 - 2016-09-04: Add Portfolio Page Index and Individual Project Pages
 - 2016-09-01: Add Blog Index Page   
