@@ -66,4 +66,74 @@ As you can see, as we increase the size of our input, along the x axis, the time
 
 If we can identify code patterns that lead to these different outcomes, we can design our code so that it scales in a more linear fashion and so is less complex for large inputs.
 
-The best way to understand is for an example, so below I'll give an example of code which leads to each of the major BigO complexitites.
+The best way to understand is for an example, so below I'll give an example of code which leads to each of the major BigO complexities.
+
+# O(1) - Constant Time
+
+Code that is O(1) means that the time-complexity of the code doesn't change with increased input size. The example below shows an example of integer manipulation where the computer is only doing two operations. The difference in dividing 2/1 and dividing 10^10 / 2 is miniscule and so we can assume that this algorithm takes a constant amount of time.
+
+```java
+int mod(int a, int b) {
+  if (b <= 0){
+    return -1;
+  }
+  int div = a / b;
+  return a - div * b;
+}
+```
+
+# O(n) - Scales linearly with the size of the input
+
+O(n) algorithms scale linearly. This means if we double the input size, we double the complexity of the operation.
+
+Below we have a function that multiplies two numbers a and b together using a for loop. The computer has two add two numbers together b times. This means our algorithm will scale as O(b).
+
+```java
+int product(int a, int b) {
+  int sum = 0;
+  for (int i = 0; i < b; i++) {
+    sum += a;
+  }
+  return sum
+}
+```
+# O(log n)
+
+Lets look at something a little harder. The code below is a recursive algorithm to find the square root of a number. It divides the range 0 to n into two halves, then checks if the halfway point is the square root. If not, it looks at whether the half point is too large or too small. It then repeats the search in the correct half.
+
+This means that on each iteration the size of the data set gets cut in half. These sort of searches form a family called binary searches. Any algorithm where the data set is cut in half iteratively is known as a O(log n) function.
+
+```java
+int sqrt(int n){
+  return sqrt_helper(n, 1, n);
+}
+
+int sqrt_helper(int n, int min, int max){
+  if (max < min) return -1;
+
+  int guess = (min + max) / 2;
+  if (guess * guess == n){
+    return guess;
+  } else if (guess * guess < n) {
+    return sqrt_helper(n, guess+1, max);
+  } else {
+    return sqrt_helper(n, min, guess -1);
+  }
+}
+```
+
+# O(n^2)
+
+Below we have a double nested for loop. This means for each value a, we have to do the operation for each value of b. Therefore, the function is O(a*b) which in the case that a == b == n, is the same as O(n^2). These functions scale very quickly with increasing n and should be avoided!
+
+```java
+int function(int a, int b) {
+  for (int i = 0; i < a; i++) {
+    for (int i = 0; i < b; i++) {
+      // do something
+    }
+  }
+}
+```
+
+It's really worth exploring the maths behind this further if you want to truly understand why your triple nested for loop is running so slowly. It's something that will help you become a better developer.
