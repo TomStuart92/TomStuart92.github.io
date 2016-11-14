@@ -23,28 +23,28 @@ We use Big O notation to understand how programs scale with an increasing number
 
 The main idea is that we identify a mathematical function that reflects how our program will handle increased input size. The main functions are below:
 
-<svg id="chart" width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+<svg id="chart" width="700" height="500" xmlns="http://www.w3.org/2000/svg">
   <!-- horrible region -->
-  <path d="M50 450 L 50 0 L 800 0 L 800 450 Z" fill="#ff8989"></path>
+  <path d="M50 450 L 50 0 L 700 0 L 700 450 Z" fill="#ff8989"></path>
   <!-- bad region -->
-  <path d="M50 450 L 800 0 L 800 450 Z" fill="#FFC543"></path>
+  <path d="M50 450 L 700 0 L 700 450 Z" fill="#FFC543"></path>
   <!-- fair region -->
-  <path d="M50 450 L 800 450 L 800 330 Z" fill="yellow"></path>
+  <path d="M50 450 L 700 450 L 700 330 Z" fill="yellow"></path>
   <!-- good region -->
-  <path d="M50 450 L 800 450 L 800 410 Z" fill="#C8EA00"></path>
+  <path d="M50 450 L 700 450 L 700 410 Z" fill="#C8EA00"></path>
   <!-- excellent region -->
-  <path d="M50 450 L 800 450 L 800 440 Z" fill="#53d000"></path>
+  <path d="M50 450 L 700 450 L 700 440 Z" fill="#53d000"></path>
 
   <!-- axes -->
-  <path d="M50 0 L 50 450 L 800 450" fill="transparent" stroke="black" stroke-width="2"></path>
+  <path d="M50 0 L 50 450 L 700 450" fill="transparent" stroke="black" stroke-width="2"></path>
 
-  <path d="M50 448 L 800 448" fill="transparent" stroke="black" stroke-width="2"></path>
+  <path d="M50 448 L 700 448" fill="transparent" stroke="black" stroke-width="2"></path>
   <text x="700" y="438" fill="black">O(log n), O(1)</text>
 
-  <path d="M50 450 L 800 400" fill="transparent" stroke="black" stroke-width="2"></path>
+  <path d="M50 450 L 700 400" fill="transparent" stroke="black" stroke-width="2"></path>
   <text x="760" y="390" fill="black">O(n)</text>
 
-  <path d="M50 450 Q 400 350, 800 150" fill="transparent" stroke="black" stroke-width="2"></path>
+  <path d="M50 450 Q 400 350, 700 150" fill="transparent" stroke="black" stroke-width="2"></path>
   <text x="630" y="190" fill="black">O(n log n)</text>
 
   <path d="M50 450 Q 180 380, 250 0" fill="transparent" stroke="black" stroke-width="2"></path>
@@ -60,4 +60,6 @@ The main idea is that we identify a mathematical function that reflects how our 
   <text x="0" y="0" transform="translate(420 470)" style="dominant-baseline: middle; text-anchor: middle; font-size:20px; color: #555; font-style: italic;" fill="black">Elements</text>
 </svg>
 
-Credit - [Big O Cheatsheet](bigocheatsheet.com) 
+Credit - [Big O Cheatsheet](bigocheatsheet.com)
+
+As you can see,
