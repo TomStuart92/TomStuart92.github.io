@@ -45,7 +45,7 @@ The main idea is that we identify a mathematical function that reflects how our 
   <text x="760" y="390" fill="black">O(n)</text>
 
   <path d="M50 450 Q 400 350, 700 150" fill="transparent" stroke="black" stroke-width="2"></path>
-  <text x="630" y="190" fill="black">O(n log n)</text>
+  <text x="500" y="190" fill="black">O(n log n)</text>
 
   <path d="M50 450 Q 180 380, 250 0" fill="transparent" stroke="black" stroke-width="2"></path>
   <text x="260" y="30" fill="black">O(n^2)</text>
@@ -62,4 +62,8 @@ The main idea is that we identify a mathematical function that reflects how our 
 
 Credit - [Big O Cheatsheet](bigocheatsheet.com)
 
-As you can see,
+As you can see, as we increase the size of our input, along the x axis, the time-complexity shown on the y-axis scales differently. Some programs change very little when we increase the number of elements, such as O(log n) programs. Others change a lot with very small increases  in input size such as O(n!) algorithms.
+
+If we can identify code patterns that lead to these different outcomes, we can design our code so that it scales in a more linear fashion and so is less complex for large inputs.
+
+The best way to understand is for an example, so below I'll give an example of code which leads to each of the major BigO complexitites.
