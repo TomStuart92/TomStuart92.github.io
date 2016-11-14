@@ -39,7 +39,7 @@ The main idea is that we identify a mathematical function that reflects how our 
   <path d="M50 0 L 50 450 L 700 450" fill="transparent" stroke="black" stroke-width="2"></path>
 
   <path d="M50 448 L 700 448" fill="transparent" stroke="black" stroke-width="2"></path>
-  <text x="600" y="438" fill="black">O(log n), O(1)</text>
+  <text x="550" y="438" fill="black">O(log n), O(1)</text>
 
   <path d="M50 450 L 700 400" fill="transparent" stroke="black" stroke-width="2"></path>
   <text x="550" y="400" fill="black">O(n)</text>
