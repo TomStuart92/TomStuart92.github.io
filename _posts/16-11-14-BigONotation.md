@@ -97,6 +97,7 @@ int product(int a, int b) {
   return sum
 }
 ```
+
 # O(log n)
 
 Lets look at something a little harder. The code below is a recursive algorithm to find the square root of a number. It divides the range 0 to n into two halves, then checks if the halfway point is the square root. If not, it looks at whether the half point is too large or too small. It then repeats the search in the correct half.
@@ -118,6 +119,30 @@ int sqrt_helper(int n, int min, int max){
     return sqrt_helper(n, guess+1, max);
   } else {
     return sqrt_helper(n, min, guess -1);
+  }
+}
+```
+
+# O(n log n)
+
+A function is O(n log n), if like above it cuts the search set in half on each iteration, but it does something like a for loop in each iteration that also scales with n. For a contrived example:
+
+```java
+int do_something(int n, int min, int max){
+  if (max < min) return -1;
+
+  int sum = 0;
+  for (int i = 0; i < n; i++) {
+    sum += i;
+  }
+
+  int guess = (min + max) / 2;
+  if (guess * guess == n){
+    return guess;
+  } else if (guess * guess < n) {
+    return do_something(n, guess+1, max);
+  } else {
+    return do_something(n, min, guess -1);
   }
 }
 ```
