@@ -39,24 +39,24 @@ The main idea is that we identify a mathematical function that reflects how our 
   <path d="M50 0 L 50 450 L 700 450" fill="transparent" stroke="black" stroke-width="2"></path>
 
   <path d="M50 448 L 700 448" fill="transparent" stroke="black" stroke-width="2"></path>
-  <text x="700" y="438" fill="black">O(log n), O(1)</text>
+  <text x="600" y="438" fill="black">O(log n), O(1)</text>
 
   <path d="M50 450 L 700 400" fill="transparent" stroke="black" stroke-width="2"></path>
-  <text x="760" y="390" fill="black">O(n)</text>
+  <text x="550" y="400" fill="black">O(n)</text>
 
   <path d="M50 450 Q 400 350, 700 150" fill="transparent" stroke="black" stroke-width="2"></path>
-  <text x="500" y="190" fill="black">O(n log n)</text>
+  <text x="550" y="190" fill="black">O(n log n)</text>
 
   <path d="M50 450 Q 180 380, 250 0" fill="transparent" stroke="black" stroke-width="2"></path>
   <text x="260" y="30" fill="black">O(n^2)</text>
 
   <path d="M50 450 C 100 430, 120 350, 120 0" fill="transparent" stroke="black" stroke-width="2"></path>
-  <text x="125" y="20" fill="black">O(2^n)</text>
+  <text x="125" y="40" fill="black">O(2^n)</text>
 
   <path d="M50 450 C 80 450, 80 350, 80 0" fill="transparent" stroke="black" stroke-width="2"></path>
   <text x="80" y="20" fill="black">O(n!)</text>
 
-  <text x="0" y="0" transform="translate(30 230) rotate(-90)" style="dominant-baseline: middle; text-anchor: middle; font-size:20px; color: #555; font-size:20px; color: #555; font-style: italic;" fill="black">Operations</text>
+  <text x="0" y="0" transform="translate(30 230) rotate(-90)" style="dominant-baseline: middle; text-anchor: middle; font-size:20px; color: #555; font-size:20px; color: #555; font-style: italic;" fill="black">Complexity</text>
   <text x="0" y="0" transform="translate(420 470)" style="dominant-baseline: middle; text-anchor: middle; font-size:20px; color: #555; font-style: italic;" fill="black">Elements</text>
 </svg>
 
